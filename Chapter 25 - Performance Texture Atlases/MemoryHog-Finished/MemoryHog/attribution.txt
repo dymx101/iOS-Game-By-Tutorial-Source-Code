@@ -1,0 +1,11 @@
+The images from game6.atlas onwards come from free game art packs available online at vickiwenderlich.com:
+
+http://www.vickiwenderlich.com/category/free-art/game-art/
+
+The website has posts about each game pack, showing all the art inside and explaining how it might be used - could be useful so that you don't have to open every zip file to see what's in there!
+
+All of this art is under a creative commons attribution license - meaning you can use the art however you want (other than selling it as a set of game art of course) and all you need to do is credit me or link to the site somewhere in your game. The main reason I do this is so that other developers can find out about the free art too! 
+
+Enjoy! Can't wait to see what you make with the art :]
+
+-Vicki Wenderlich

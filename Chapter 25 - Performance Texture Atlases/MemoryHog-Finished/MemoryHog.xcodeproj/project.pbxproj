@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35202D5017E96B87001611CE /* 3elements.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 35202D4F17E96B87001611CE /* 3elements.atlas */; };
+		DC54E83517D108B900FC3F44 /* game1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DC54E83217D108B900FC3F44 /* game1.atlas */; };
+		DC54E83617D108B900FC3F44 /* game2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DC54E83317D108B900FC3F44 /* game2.atlas */; };
+		DC54E83917D1095100FC3F44 /* game3.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DC54E83817D1095100FC3F44 /* game3.atlas */; };
+		DCCB020217CEEABB00E74B9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCB020117CEEABB00E74B9F /* Foundation.framework */; };
+		DCCB020417CEEABB00E74B9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCB020317CEEABB00E74B9F /* CoreGraphics.framework */; };
+		DCCB020617CEEABB00E74B9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCB020517CEEABB00E74B9F /* UIKit.framework */; };
+		DCCB020817CEEABC00E74B9F /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCB020717CEEABC00E74B9F /* SpriteKit.framework */; };
+		DCCB020E17CEEABC00E74B9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCCB020C17CEEABC00E74B9F /* InfoPlist.strings */; };
+		DCCB021017CEEABC00E74B9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCB020F17CEEABC00E74B9F /* main.m */; };
+		DCCB021417CEEABC00E74B9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCB021317CEEABC00E74B9F /* AppDelegate.m */; };
+		DCCB021717CEEABC00E74B9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCCB021517CEEABC00E74B9F /* Main.storyboard */; };
+		DCCB021A17CEEABC00E74B9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCB021917CEEABC00E74B9F /* ViewController.m */; };
+		DCCB021D17CEEABC00E74B9F /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCB021C17CEEABC00E74B9F /* MyScene.m */; };
+		DCCB022117CEEABC00E74B9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCCB022017CEEABC00E74B9F /* Images.xcassets */; };
+		DCCB022817CEEABC00E74B9F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCB022717CEEABC00E74B9F /* XCTest.framework */; };
+		DCCB022917CEEABC00E74B9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCB020117CEEABB00E74B9F /* Foundation.framework */; };
+		DCCB022A17CEEABC00E74B9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCB020517CEEABB00E74B9F /* UIKit.framework */; };
+		DCCB023217CEEABC00E74B9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCCB023017CEEABC00E74B9F /* InfoPlist.strings */; };
+		DCCB023417CEEABC00E74B9F /* MemoryHogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCB023317CEEABC00E74B9F /* MemoryHogTests.m */; };
+		E1B1301017E7B23100594C8E /* LoadingScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B1300F17E7B23100594C8E /* LoadingScene.m */; };
+		E1B1301417E7BA7800594C8E /* game4.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1301117E7BA7800594C8E /* game4.atlas */; };
+		E1B1301517E7BA7800594C8E /* game5.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1301217E7BA7800594C8E /* game5.atlas */; };
+		E1B1301617E7BA7800594C8E /* game6.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1301317E7BA7800594C8E /* game6.atlas */; };
+		E1B1303017E7C35500594C8E /* game7.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1301717E7C35500594C8E /* game7.atlas */; };
+		E1B1303117E7C35500594C8E /* game8.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1301817E7C35500594C8E /* game8.atlas */; };
+		E1B1303217E7C35500594C8E /* game9.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1301917E7C35500594C8E /* game9.atlas */; };
+		E1B1303317E7C35500594C8E /* game10.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1301A17E7C35500594C8E /* game10.atlas */; };
+		E1B1303417E7C35500594C8E /* game11.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1301B17E7C35500594C8E /* game11.atlas */; };
+		E1B1303517E7C35500594C8E /* game12.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1301C17E7C35500594C8E /* game12.atlas */; };
+		E1B1303617E7C35500594C8E /* game13.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1301D17E7C35500594C8E /* game13.atlas */; };
+		E1B1303717E7C35500594C8E /* game14.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1301E17E7C35500594C8E /* game14.atlas */; };
+		E1B1303817E7C35500594C8E /* game15.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1301F17E7C35500594C8E /* game15.atlas */; };
+		E1B1303917E7C35500594C8E /* game16.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302017E7C35500594C8E /* game16.atlas */; };
+		E1B1303A17E7C35500594C8E /* game17.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302117E7C35500594C8E /* game17.atlas */; };
+		E1B1303B17E7C35500594C8E /* game18.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302217E7C35500594C8E /* game18.atlas */; };
+		E1B1303C17E7C35500594C8E /* game19.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302317E7C35500594C8E /* game19.atlas */; };
+		E1B1303D17E7C35500594C8E /* game20.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302417E7C35500594C8E /* game20.atlas */; };
+		E1B1303E17E7C35500594C8E /* game21.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302517E7C35500594C8E /* game21.atlas */; };
+		E1B1303F17E7C35500594C8E /* game22.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302617E7C35500594C8E /* game22.atlas */; };
+		E1B1304017E7C35500594C8E /* game23.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302717E7C35500594C8E /* game23.atlas */; };
+		E1B1304117E7C35500594C8E /* game24.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302817E7C35500594C8E /* game24.atlas */; };
+		E1B1304217E7C35500594C8E /* game25.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302917E7C35500594C8E /* game25.atlas */; };
+		E1B1304317E7C35500594C8E /* game26.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302A17E7C35500594C8E /* game26.atlas */; };
+		E1B1304417E7C35500594C8E /* game27.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302B17E7C35500594C8E /* game27.atlas */; };
+		E1B1304517E7C35500594C8E /* game28.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302C17E7C35500594C8E /* game28.atlas */; };
+		E1B1304617E7C35500594C8E /* game29.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302D17E7C35500594C8E /* game29.atlas */; };
+		E1B1304717E7C35500594C8E /* game30.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302E17E7C35500594C8E /* game30.atlas */; };
+		E1B1304817E7C35500594C8E /* game31.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E1B1302F17E7C35500594C8E /* game31.atlas */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCCB022B17CEEABC00E74B9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCCB01F617CEEABB00E74B9F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCCB01FD17CEEABB00E74B9F;
+			remoteInfo = MemoryHog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		35202D4F17E96B87001611CE /* 3elements.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = 3elements.atlas; sourceTree = "<group>"; };
+		DC54E83217D108B900FC3F44 /* game1.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game1.atlas; sourceTree = "<group>"; };
+		DC54E83317D108B900FC3F44 /* game2.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game2.atlas; sourceTree = "<group>"; };
+		DC54E83817D1095100FC3F44 /* game3.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game3.atlas; sourceTree = "<group>"; };
+		DCCB01FE17CEEABB00E74B9F /* MemoryHog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryHog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCCB020117CEEABB00E74B9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DCCB020317CEEABB00E74B9F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DCCB020517CEEABB00E74B9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DCCB020717CEEABC00E74B9F /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		DCCB020B17CEEABC00E74B9F /* MemoryHog-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MemoryHog-Info.plist"; sourceTree = "<group>"; };
+		DCCB020D17CEEABC00E74B9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DCCB020F17CEEABC00E74B9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DCCB021117CEEABC00E74B9F /* MemoryHog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoryHog-Prefix.pch"; sourceTree = "<group>"; };
+		DCCB021217CEEABC00E74B9F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DCCB021317CEEABC00E74B9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DCCB021617CEEABC00E74B9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCCB021817CEEABC00E74B9F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DCCB021917CEEABC00E74B9F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DCCB021B17CEEABC00E74B9F /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		DCCB021C17CEEABC00E74B9F /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		DCCB022017CEEABC00E74B9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DCCB022617CEEABC00E74B9F /* MemoryHogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryHogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCCB022717CEEABC00E74B9F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DCCB022F17CEEABC00E74B9F /* MemoryHogTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MemoryHogTests-Info.plist"; sourceTree = "<group>"; };
+		DCCB023117CEEABC00E74B9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DCCB023317CEEABC00E74B9F /* MemoryHogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryHogTests.m; sourceTree = "<group>"; };
+		E1B1300E17E7B23100594C8E /* LoadingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingScene.h; sourceTree = "<group>"; };
+		E1B1300F17E7B23100594C8E /* LoadingScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingScene.m; sourceTree = "<group>"; };
+		E1B1301117E7BA7800594C8E /* game4.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game4.atlas; sourceTree = "<group>"; };
+		E1B1301217E7BA7800594C8E /* game5.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game5.atlas; sourceTree = "<group>"; };
+		E1B1301317E7BA7800594C8E /* game6.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game6.atlas; sourceTree = "<group>"; };
+		E1B1301717E7C35500594C8E /* game7.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game7.atlas; sourceTree = "<group>"; };
+		E1B1301817E7C35500594C8E /* game8.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game8.atlas; sourceTree = "<group>"; };
+		E1B1301917E7C35500594C8E /* game9.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game9.atlas; sourceTree = "<group>"; };
+		E1B1301A17E7C35500594C8E /* game10.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game10.atlas; sourceTree = "<group>"; };
+		E1B1301B17E7C35500594C8E /* game11.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game11.atlas; sourceTree = "<group>"; };
+		E1B1301C17E7C35500594C8E /* game12.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game12.atlas; sourceTree = "<group>"; };
+		E1B1301D17E7C35500594C8E /* game13.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game13.atlas; sourceTree = "<group>"; };
+		E1B1301E17E7C35500594C8E /* game14.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game14.atlas; sourceTree = "<group>"; };
+		E1B1301F17E7C35500594C8E /* game15.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game15.atlas; sourceTree = "<group>"; };
+		E1B1302017E7C35500594C8E /* game16.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game16.atlas; sourceTree = "<group>"; };
+		E1B1302117E7C35500594C8E /* game17.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game17.atlas; sourceTree = "<group>"; };
+		E1B1302217E7C35500594C8E /* game18.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game18.atlas; sourceTree = "<group>"; };
+		E1B1302317E7C35500594C8E /* game19.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game19.atlas; sourceTree = "<group>"; };
+		E1B1302417E7C35500594C8E /* game20.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game20.atlas; sourceTree = "<group>"; };
+		E1B1302517E7C35500594C8E /* game21.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game21.atlas; sourceTree = "<group>"; };
+		E1B1302617E7C35500594C8E /* game22.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game22.atlas; sourceTree = "<group>"; };
+		E1B1302717E7C35500594C8E /* game23.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game23.atlas; sourceTree = "<group>"; };
+		E1B1302817E7C35500594C8E /* game24.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game24.atlas; sourceTree = "<group>"; };
+		E1B1302917E7C35500594C8E /* game25.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game25.atlas; sourceTree = "<group>"; };
+		E1B1302A17E7C35500594C8E /* game26.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game26.atlas; sourceTree = "<group>"; };
+		E1B1302B17E7C35500594C8E /* game27.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game27.atlas; sourceTree = "<group>"; };
+		E1B1302C17E7C35500594C8E /* game28.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game28.atlas; sourceTree = "<group>"; };
+		E1B1302D17E7C35500594C8E /* game29.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game29.atlas; sourceTree = "<group>"; };
+		E1B1302E17E7C35500594C8E /* game30.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game30.atlas; sourceTree = "<group>"; };
+		E1B1302F17E7C35500594C8E /* game31.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = game31.atlas; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCCB01FB17CEEABB00E74B9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCCB020417CEEABB00E74B9F /* CoreGraphics.framework in Frameworks */,
+				DCCB020617CEEABB00E74B9F /* UIKit.framework in Frameworks */,
+				DCCB020817CEEABC00E74B9F /* SpriteKit.framework in Frameworks */,
+				DCCB020217CEEABB00E74B9F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCCB022317CEEABC00E74B9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCCB022817CEEABC00E74B9F /* XCTest.framework in Frameworks */,
+				DCCB022A17CEEABC00E74B9F /* UIKit.framework in Frameworks */,
+				DCCB022917CEEABC00E74B9F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCCB01F517CEEABB00E74B9F = {
+			isa = PBXGroup;
+			children = (
+				DCCB020917CEEABC00E74B9F /* MemoryHog */,
+				DCCB022D17CEEABC00E74B9F /* MemoryHogTests */,
+				DCCB020017CEEABB00E74B9F /* Frameworks */,
+				DCCB01FF17CEEABB00E74B9F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCCB01FF17CEEABB00E74B9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCCB01FE17CEEABB00E74B9F /* MemoryHog.app */,
+				DCCB022617CEEABC00E74B9F /* MemoryHogTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCCB020017CEEABB00E74B9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCCB020117CEEABB00E74B9F /* Foundation.framework */,
+				DCCB020317CEEABB00E74B9F /* CoreGraphics.framework */,
+				DCCB020517CEEABB00E74B9F /* UIKit.framework */,
+				DCCB020717CEEABC00E74B9F /* SpriteKit.framework */,
+				DCCB022717CEEABC00E74B9F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCCB020917CEEABC00E74B9F /* MemoryHog */ = {
+			isa = PBXGroup;
+			children = (
+				DCCB023E17CEEB4D00E74B9F /* Classes */,
+				DCCB023D17CEEB4700E74B9F /* Images */,
+				DCCB022017CEEABC00E74B9F /* Images.xcassets */,
+				DCCB020A17CEEABC00E74B9F /* Supporting Files */,
+			);
+			path = MemoryHog;
+			sourceTree = "<group>";
+		};
+		DCCB020A17CEEABC00E74B9F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCCB020B17CEEABC00E74B9F /* MemoryHog-Info.plist */,
+				DCCB020C17CEEABC00E74B9F /* InfoPlist.strings */,
+				DCCB020F17CEEABC00E74B9F /* main.m */,
+				DCCB021117CEEABC00E74B9F /* MemoryHog-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCCB022D17CEEABC00E74B9F /* MemoryHogTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCCB023317CEEABC00E74B9F /* MemoryHogTests.m */,
+				DCCB022E17CEEABC00E74B9F /* Supporting Files */,
+			);
+			path = MemoryHogTests;
+			sourceTree = "<group>";
+		};
+		DCCB022E17CEEABC00E74B9F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCCB022F17CEEABC00E74B9F /* MemoryHogTests-Info.plist */,
+				DCCB023017CEEABC00E74B9F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCCB023D17CEEB4700E74B9F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				35202D4F17E96B87001611CE /* 3elements.atlas */,
+				DC54E83217D108B900FC3F44 /* game1.atlas */,
+				DC54E83317D108B900FC3F44 /* game2.atlas */,
+				DC54E83817D1095100FC3F44 /* game3.atlas */,
+				E1B1301117E7BA7800594C8E /* game4.atlas */,
+				E1B1301217E7BA7800594C8E /* game5.atlas */,
+				E1B1301317E7BA7800594C8E /* game6.atlas */,
+				E1B1301717E7C35500594C8E /* game7.atlas */,
+				E1B1301817E7C35500594C8E /* game8.atlas */,
+				E1B1301917E7C35500594C8E /* game9.atlas */,
+				E1B1301A17E7C35500594C8E /* game10.atlas */,
+				E1B1301B17E7C35500594C8E /* game11.atlas */,
+				E1B1301C17E7C35500594C8E /* game12.atlas */,
+				E1B1301D17E7C35500594C8E /* game13.atlas */,
+				E1B1301E17E7C35500594C8E /* game14.atlas */,
+				E1B1301F17E7C35500594C8E /* game15.atlas */,
+				E1B1302017E7C35500594C8E /* game16.atlas */,
+				E1B1302117E7C35500594C8E /* game17.atlas */,
+				E1B1302217E7C35500594C8E /* game18.atlas */,
+				E1B1302317E7C35500594C8E /* game19.atlas */,
+				E1B1302417E7C35500594C8E /* game20.atlas */,
+				E1B1302517E7C35500594C8E /* game21.atlas */,
+				E1B1302617E7C35500594C8E /* game22.atlas */,
+				E1B1302717E7C35500594C8E /* game23.atlas */,
+				E1B1302817E7C35500594C8E /* game24.atlas */,
+				E1B1302917E7C35500594C8E /* game25.atlas */,
+				E1B1302A17E7C35500594C8E /* game26.atlas */,
+				E1B1302B17E7C35500594C8E /* game27.atlas */,
+				E1B1302C17E7C35500594C8E /* game28.atlas */,
+				E1B1302D17E7C35500594C8E /* game29.atlas */,
+				E1B1302E17E7C35500594C8E /* game30.atlas */,
+				E1B1302F17E7C35500594C8E /* game31.atlas */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		DCCB023E17CEEB4D00E74B9F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DCCB021217CEEABC00E74B9F /* AppDelegate.h */,
+				DCCB021317CEEABC00E74B9F /* AppDelegate.m */,
+				DCCB021517CEEABC00E74B9F /* Main.storyboard */,
+				DCCB021817CEEABC00E74B9F /* ViewController.h */,
+				DCCB021917CEEABC00E74B9F /* ViewController.m */,
+				DCCB021B17CEEABC00E74B9F /* MyScene.h */,
+				DCCB021C17CEEABC00E74B9F /* MyScene.m */,
+				E1B1300E17E7B23100594C8E /* LoadingScene.h */,
+				E1B1300F17E7B23100594C8E /* LoadingScene.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCCB01FD17CEEABB00E74B9F /* MemoryHog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCCB023717CEEABC00E74B9F /* Build configuration list for PBXNativeTarget "MemoryHog" */;
+			buildPhases = (
+				DCCB01FA17CEEABB00E74B9F /* Sources */,
+				DCCB01FB17CEEABB00E74B9F /* Frameworks */,
+				DCCB01FC17CEEABB00E74B9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MemoryHog;
+			productName = MemoryHog;
+			productReference = DCCB01FE17CEEABB00E74B9F /* MemoryHog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCCB022517CEEABC00E74B9F /* MemoryHogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCCB023A17CEEABC00E74B9F /* Build configuration list for PBXNativeTarget "MemoryHogTests" */;
+			buildPhases = (
+				DCCB022217CEEABC00E74B9F /* Sources */,
+				DCCB022317CEEABC00E74B9F /* Frameworks */,
+				DCCB022417CEEABC00E74B9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCCB022C17CEEABC00E74B9F /* PBXTargetDependency */,
+			);
+			name = MemoryHogTests;
+			productName = MemoryHogTests;
+			productReference = DCCB022617CEEABC00E74B9F /* MemoryHogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCCB01F617CEEABB00E74B9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Rod Strougo";
+				TargetAttributes = {
+					DCCB022517CEEABC00E74B9F = {
+						TestTargetID = DCCB01FD17CEEABB00E74B9F;
+					};
+				};
+			};
+			buildConfigurationList = DCCB01F917CEEABB00E74B9F /* Build configuration list for PBXProject "MemoryHog" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCCB01F517CEEABB00E74B9F;
+			productRefGroup = DCCB01FF17CEEABB00E74B9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCCB01FD17CEEABB00E74B9F /* MemoryHog */,
+				DCCB022517CEEABC00E74B9F /* MemoryHogTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCCB01FC17CEEABB00E74B9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC54E83617D108B900FC3F44 /* game2.atlas in Resources */,
+				E1B1303817E7C35500594C8E /* game15.atlas in Resources */,
+				E1B1303017E7C35500594C8E /* game7.atlas in Resources */,
+				E1B1301517E7BA7800594C8E /* game5.atlas in Resources */,
+				DCCB020E17CEEABC00E74B9F /* InfoPlist.strings in Resources */,
+				E1B1303B17E7C35500594C8E /* game18.atlas in Resources */,
+				E1B1304317E7C35500594C8E /* game26.atlas in Resources */,
+				E1B1304017E7C35500594C8E /* game23.atlas in Resources */,
+				E1B1301617E7BA7800594C8E /* game6.atlas in Resources */,
+				DC54E83517D108B900FC3F44 /* game1.atlas in Resources */,
+				E1B1303417E7C35500594C8E /* game11.atlas in Resources */,
+				E1B1304717E7C35500594C8E /* game30.atlas in Resources */,
+				E1B1301417E7BA7800594C8E /* game4.atlas in Resources */,
+				E1B1304617E7C35500594C8E /* game29.atlas in Resources */,
+				E1B1303F17E7C35500594C8E /* game22.atlas in Resources */,
+				E1B1303217E7C35500594C8E /* game9.atlas in Resources */,
+				E1B1303117E7C35500594C8E /* game8.atlas in Resources */,
+				E1B1304117E7C35500594C8E /* game24.atlas in Resources */,
+				E1B1303917E7C35500594C8E /* game16.atlas in Resources */,
+				DCCB022117CEEABC00E74B9F /* Images.xcassets in Resources */,
+				E1B1304517E7C35500594C8E /* game28.atlas in Resources */,
+				E1B1303617E7C35500594C8E /* game13.atlas in Resources */,
+				35202D5017E96B87001611CE /* 3elements.atlas in Resources */,
+				E1B1303517E7C35500594C8E /* game12.atlas in Resources */,
+				E1B1304417E7C35500594C8E /* game27.atlas in Resources */,
+				E1B1303E17E7C35500594C8E /* game21.atlas in Resources */,
+				DCCB021717CEEABC00E74B9F /* Main.storyboard in Resources */,
+				E1B1303C17E7C35500594C8E /* game19.atlas in Resources */,
+				E1B1303D17E7C35500594C8E /* game20.atlas in Resources */,
+				E1B1303317E7C35500594C8E /* game10.atlas in Resources */,
+				E1B1303717E7C35500594C8E /* game14.atlas in Resources */,
+				E1B1303A17E7C35500594C8E /* game17.atlas in Resources */,
+				E1B1304817E7C35500594C8E /* game31.atlas in Resources */,
+				DC54E83917D1095100FC3F44 /* game3.atlas in Resources */,
+				E1B1304217E7C35500594C8E /* game25.atlas in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCCB022417CEEABC00E74B9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCCB023217CEEABC00E74B9F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCCB01FA17CEEABB00E74B9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCCB021D17CEEABC00E74B9F /* MyScene.m in Sources */,
+				DCCB021A17CEEABC00E74B9F /* ViewController.m in Sources */,
+				DCCB021417CEEABC00E74B9F /* AppDelegate.m in Sources */,
+				E1B1301017E7B23100594C8E /* LoadingScene.m in Sources */,
+				DCCB021017CEEABC00E74B9F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCCB022217CEEABC00E74B9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCCB023417CEEABC00E74B9F /* MemoryHogTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCCB022C17CEEABC00E74B9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCCB01FD17CEEABB00E74B9F /* MemoryHog */;
+			targetProxy = DCCB022B17CEEABC00E74B9F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCCB020C17CEEABC00E74B9F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCCB020D17CEEABC00E74B9F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DCCB021517CEEABC00E74B9F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCCB021617CEEABC00E74B9F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DCCB023017CEEABC00E74B9F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCCB023117CEEABC00E74B9F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCCB023517CEEABC00E74B9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DCCB023617CEEABC00E74B9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCCB023817CEEABC00E74B9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemoryHog/MemoryHog-Prefix.pch";
+				INFOPLIST_FILE = "MemoryHog/MemoryHog-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DCCB023917CEEABC00E74B9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemoryHog/MemoryHog-Prefix.pch";
+				INFOPLIST_FILE = "MemoryHog/MemoryHog-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DCCB023B17CEEABC00E74B9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MemoryHog.app/MemoryHog";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemoryHog/MemoryHog-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MemoryHogTests/MemoryHogTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DCCB023C17CEEABC00E74B9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MemoryHog.app/MemoryHog";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemoryHog/MemoryHog-Prefix.pch";
+				INFOPLIST_FILE = "MemoryHogTests/MemoryHogTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCCB01F917CEEABB00E74B9F /* Build configuration list for PBXProject "MemoryHog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCCB023517CEEABC00E74B9F /* Debug */,
+				DCCB023617CEEABC00E74B9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCCB023717CEEABC00E74B9F /* Build configuration list for PBXNativeTarget "MemoryHog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCCB023817CEEABC00E74B9F /* Debug */,
+				DCCB023917CEEABC00E74B9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCCB023A17CEEABC00E74B9F /* Build configuration list for PBXNativeTarget "MemoryHogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCCB023B17CEEABC00E74B9F /* Debug */,
+				DCCB023C17CEEABC00E74B9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCCB01F617CEEABB00E74B9F /* Project object */;
+}

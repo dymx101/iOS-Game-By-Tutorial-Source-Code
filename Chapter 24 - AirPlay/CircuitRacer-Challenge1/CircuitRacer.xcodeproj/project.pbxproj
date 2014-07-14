@@ -1,0 +1,875 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3533C9B51803225E00A6DA50 /* SteeringWheelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3533C9B41803225D00A6DA50 /* SteeringWheelViewController.m */; };
+		3560458C17F0C56000BFE472 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3560458B17F0C56000BFE472 /* GameKit.framework */; };
+		3560459017F0CBFE00BFE472 /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3560458F17F0CBFE00BFE472 /* GameKitHelper.m */; };
+		3560459617F0CDDD00BFE472 /* CircuitRacerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3560459517F0CDDD00BFE472 /* CircuitRacerNavigationController.m */; };
+		3560459917F0D07E00BFE472 /* AchievementsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3560459817F0D07E00BFE472 /* AchievementsHelper.m */; };
+		3560459C17F0DA4500BFE472 /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3560459B17F0DA4500BFE472 /* HomeScreenViewController.m */; };
+		3583884D17EB934F004757B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3583884C17EB934F004757B4 /* Foundation.framework */; };
+		3583884F17EB934F004757B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3583884E17EB934F004757B4 /* CoreGraphics.framework */; };
+		3583885117EB934F004757B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3583885017EB934F004757B4 /* UIKit.framework */; };
+		3583885317EB934F004757B4 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3583885217EB934F004757B4 /* SpriteKit.framework */; };
+		3583885917EB934F004757B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3583885717EB934F004757B4 /* InfoPlist.strings */; };
+		3583885B17EB934F004757B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3583885A17EB934F004757B4 /* main.m */; };
+		3583885F17EB934F004757B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3583885E17EB934F004757B4 /* AppDelegate.m */; };
+		3583886217EB934F004757B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3583886017EB934F004757B4 /* Main.storyboard */; };
+		3583886517EB934F004757B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3583886417EB934F004757B4 /* ViewController.m */; };
+		3583886817EB934F004757B4 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3583886717EB934F004757B4 /* MyScene.m */; };
+		3583886A17EB934F004757B4 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583886917EB934F004757B4 /* Spaceship.png */; };
+		3583886C17EB934F004757B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3583886B17EB934F004757B4 /* Images.xcassets */; };
+		3583887317EB934F004757B4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3583887217EB934F004757B4 /* XCTest.framework */; };
+		3583887417EB934F004757B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3583884C17EB934F004757B4 /* Foundation.framework */; };
+		3583887517EB934F004757B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3583885017EB934F004757B4 /* UIKit.framework */; };
+		3583887D17EB934F004757B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3583887B17EB934F004757B4 /* InfoPlist.strings */; };
+		3583887F17EB934F004757B4 /* CircuitRacerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3583887E17EB934F004757B4 /* CircuitRacerTests.m */; };
+		358388C217EB9444004757B4 /* achievement-amateur.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583888A17EB9444004757B4 /* achievement-amateur.png */; };
+		358388C317EB9444004757B4 /* achievement-destruction.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583888B17EB9444004757B4 /* achievement-destruction.png */; };
+		358388C417EB9444004757B4 /* achievement-intermediate.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583888C17EB9444004757B4 /* achievement-intermediate.png */; };
+		358388C517EB9444004757B4 /* achievement-professional.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583888D17EB9444004757B4 /* achievement-professional.png */; };
+		358388C617EB9444004757B4 /* bg-main-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583888F17EB9444004757B4 /* bg-main-menu.png */; };
+		358388C717EB9444004757B4 /* bg-main-menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583889017EB9444004757B4 /* bg-main-menu@2x.png */; };
+		358388C817EB9444004757B4 /* bg-select-car.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583889117EB9444004757B4 /* bg-select-car.png */; };
+		358388C917EB9444004757B4 /* bg-select-car@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583889217EB9444004757B4 /* bg-select-car@2x.png */; };
+		358388CA17EB9444004757B4 /* bg-select-difficulty.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583889317EB9444004757B4 /* bg-select-difficulty.png */; };
+		358388CB17EB9444004757B4 /* bg-select-difficulty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583889417EB9444004757B4 /* bg-select-difficulty@2x.png */; };
+		358388CC17EB9444004757B4 /* track_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583889517EB9444004757B4 /* track_1.png */; };
+		358388CD17EB9444004757B4 /* track_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583889617EB9444004757B4 /* track_1@2x.png */; };
+		358388CE17EB9444004757B4 /* track_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583889717EB9444004757B4 /* track_2.png */; };
+		358388CF17EB9444004757B4 /* track_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583889817EB9444004757B4 /* track_2@2x.png */; };
+		358388D017EB9444004757B4 /* track_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583889917EB9444004757B4 /* track_3.png */; };
+		358388D117EB9444004757B4 /* track_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583889A17EB9444004757B4 /* track_3@2x.png */; };
+		358388D217EB9444004757B4 /* base.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583889C17EB9444004757B4 /* base.png */; };
+		358388D317EB9444004757B4 /* base@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583889D17EB9444004757B4 /* base@2x.png */; };
+		358388D417EB9444004757B4 /* btn-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583889E17EB9444004757B4 /* btn-back.png */; };
+		358388D517EB9444004757B4 /* btn-back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3583889F17EB9444004757B4 /* btn-back@2x.png */; };
+		358388D617EB9444004757B4 /* btn-car1.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388A017EB9444004757B4 /* btn-car1.png */; };
+		358388D717EB9444004757B4 /* btn-car1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388A117EB9444004757B4 /* btn-car1@2x.png */; };
+		358388D817EB9444004757B4 /* btn-car2.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388A217EB9444004757B4 /* btn-car2.png */; };
+		358388D917EB9444004757B4 /* btn-car2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388A317EB9444004757B4 /* btn-car2@2x.png */; };
+		358388DA17EB9444004757B4 /* btn-car3.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388A417EB9444004757B4 /* btn-car3.png */; };
+		358388DB17EB9444004757B4 /* btn-car3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388A517EB9444004757B4 /* btn-car3@2x.png */; };
+		358388DC17EB9444004757B4 /* btn-easy.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388A617EB9444004757B4 /* btn-easy.png */; };
+		358388DD17EB9444004757B4 /* btn-easy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388A717EB9444004757B4 /* btn-easy@2x.png */; };
+		358388DE17EB9444004757B4 /* btn-gamecenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388A817EB9444004757B4 /* btn-gamecenter.png */; };
+		358388DF17EB9444004757B4 /* btn-gamecenter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388A917EB9444004757B4 /* btn-gamecenter@2x.png */; };
+		358388E017EB9444004757B4 /* btn-hard.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388AA17EB9444004757B4 /* btn-hard.png */; };
+		358388E117EB9444004757B4 /* btn-hard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388AB17EB9444004757B4 /* btn-hard@2x.png */; };
+		358388E217EB9444004757B4 /* btn-medium.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388AC17EB9444004757B4 /* btn-medium.png */; };
+		358388E317EB9444004757B4 /* btn-medium@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388AD17EB9444004757B4 /* btn-medium@2x.png */; };
+		358388E417EB9444004757B4 /* btn-pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388AE17EB9444004757B4 /* btn-pause.png */; };
+		358388E517EB9444004757B4 /* btn-pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388AF17EB9444004757B4 /* btn-pause@2x.png */; };
+		358388E617EB9444004757B4 /* btn-play.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388B017EB9444004757B4 /* btn-play.png */; };
+		358388E717EB9444004757B4 /* btn-play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388B117EB9444004757B4 /* btn-play@2x.png */; };
+		358388E817EB9444004757B4 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388B217EB9444004757B4 /* knob.png */; };
+		358388E917EB9444004757B4 /* knob@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388B317EB9444004757B4 /* knob@2x.png */; };
+		358388EA17EB9444004757B4 /* steering-wheel-horn.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388B417EB9444004757B4 /* steering-wheel-horn.png */; };
+		358388EB17EB9444004757B4 /* steering-wheel-horn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388B517EB9444004757B4 /* steering-wheel-horn@2x.png */; };
+		358388EC17EB9444004757B4 /* steering-wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388B617EB9444004757B4 /* steering-wheel.png */; };
+		358388ED17EB9444004757B4 /* steering-wheel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 358388B717EB9444004757B4 /* steering-wheel@2x.png */; };
+		358388EE17EB9444004757B4 /* LevelDetails.plist in Resources */ = {isa = PBXBuildFile; fileRef = 358388B917EB9444004757B4 /* LevelDetails.plist */; };
+		358388F117EB9444004757B4 /* circuitracer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 358388BD17EB9444004757B4 /* circuitracer.mp3 */; };
+		358388F517EB9444004757B4 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 358388C117EB9444004757B4 /* sprites.atlas */; };
+		3583890117EB9C85004757B4 /* SKAction+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 358388F817EB9C85004757B4 /* SKAction+SKTExtras.m */; };
+		3583890217EB9C85004757B4 /* SKEmitterNode+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 358388FA17EB9C85004757B4 /* SKEmitterNode+SKTExtras.m */; };
+		3583890317EB9C85004757B4 /* SKNode+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 358388FC17EB9C85004757B4 /* SKNode+SKTExtras.m */; };
+		3583890417EB9C85004757B4 /* SKTAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 358388FE17EB9C85004757B4 /* SKTAudio.m */; };
+		3583890517EB9C85004757B4 /* SKTUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3583890017EB9C85004757B4 /* SKTUtils.mm */; };
+		3583890817EB9CC3004757B4 /* AnalogControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3583890717EB9CC3004757B4 /* AnalogControl.m */; };
+		3583890E17EBB136004757B4 /* box.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3583890917EBB136004757B4 /* box.wav */; };
+		3583890F17EBB136004757B4 /* button_press.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3583890A17EBB136004757B4 /* button_press.wav */; };
+		3583891017EBB136004757B4 /* horn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3583890B17EBB136004757B4 /* horn.wav */; };
+		3583891117EBB136004757B4 /* lap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3583890C17EBB136004757B4 /* lap.wav */; };
+		3583891217EBB136004757B4 /* nitro.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3583890D17EBB136004757B4 /* nitro.wav */; };
+		3583891517EBB5A1004757B4 /* SelectCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3583891417EBB5A1004757B4 /* SelectCarViewController.m */; };
+		3583891817EBB5B3004757B4 /* SelectLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3583891717EBB5B3004757B4 /* SelectLevelViewController.m */; };
+		612CE75217F458DC00638D02 /* btn-multiplayer.png in Resources */ = {isa = PBXBuildFile; fileRef = 612CE75017F458DC00638D02 /* btn-multiplayer.png */; };
+		612CE75317F458DC00638D02 /* btn-multiplayer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612CE75117F458DC00638D02 /* btn-multiplayer@2x.png */; };
+		61B43E1217F53E2B00C1B202 /* MultiplayerNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B43E1117F53E2B00C1B202 /* MultiplayerNetworking.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3583887617EB934F004757B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3583884117EB934F004757B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3583884817EB934F004757B4;
+			remoteInfo = CircuitRacer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3533C9B31803225D00A6DA50 /* SteeringWheelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteeringWheelViewController.h; sourceTree = "<group>"; };
+		3533C9B41803225D00A6DA50 /* SteeringWheelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteeringWheelViewController.m; sourceTree = "<group>"; };
+		3560458B17F0C56000BFE472 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		3560458E17F0CBFE00BFE472 /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitHelper.h; sourceTree = "<group>"; };
+		3560458F17F0CBFE00BFE472 /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
+		3560459417F0CDDD00BFE472 /* CircuitRacerNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircuitRacerNavigationController.h; sourceTree = "<group>"; };
+		3560459517F0CDDD00BFE472 /* CircuitRacerNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircuitRacerNavigationController.m; sourceTree = "<group>"; };
+		3560459717F0D07E00BFE472 /* AchievementsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementsHelper.h; sourceTree = "<group>"; };
+		3560459817F0D07E00BFE472 /* AchievementsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementsHelper.m; sourceTree = "<group>"; };
+		3560459A17F0DA4500BFE472 /* HomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreenViewController.h; sourceTree = "<group>"; };
+		3560459B17F0DA4500BFE472 /* HomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenViewController.m; sourceTree = "<group>"; };
+		3583884917EB934F004757B4 /* CircuitRacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircuitRacer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3583884C17EB934F004757B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3583884E17EB934F004757B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3583885017EB934F004757B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3583885217EB934F004757B4 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		3583885617EB934F004757B4 /* CircuitRacer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CircuitRacer-Info.plist"; sourceTree = "<group>"; };
+		3583885817EB934F004757B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3583885A17EB934F004757B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3583885C17EB934F004757B4 /* CircuitRacer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CircuitRacer-Prefix.pch"; sourceTree = "<group>"; };
+		3583885D17EB934F004757B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3583885E17EB934F004757B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3583886117EB934F004757B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3583886317EB934F004757B4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3583886417EB934F004757B4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3583886617EB934F004757B4 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		3583886717EB934F004757B4 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		3583886917EB934F004757B4 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		3583886B17EB934F004757B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3583887117EB934F004757B4 /* CircuitRacerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircuitRacerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3583887217EB934F004757B4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3583887A17EB934F004757B4 /* CircuitRacerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CircuitRacerTests-Info.plist"; sourceTree = "<group>"; };
+		3583887C17EB934F004757B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3583887E17EB934F004757B4 /* CircuitRacerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircuitRacerTests.m; sourceTree = "<group>"; };
+		3583888A17EB9444004757B4 /* achievement-amateur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievement-amateur.png"; sourceTree = "<group>"; };
+		3583888B17EB9444004757B4 /* achievement-destruction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievement-destruction.png"; sourceTree = "<group>"; };
+		3583888C17EB9444004757B4 /* achievement-intermediate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievement-intermediate.png"; sourceTree = "<group>"; };
+		3583888D17EB9444004757B4 /* achievement-professional.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievement-professional.png"; sourceTree = "<group>"; };
+		3583888F17EB9444004757B4 /* bg-main-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-main-menu.png"; sourceTree = "<group>"; };
+		3583889017EB9444004757B4 /* bg-main-menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-main-menu@2x.png"; sourceTree = "<group>"; };
+		3583889117EB9444004757B4 /* bg-select-car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-select-car.png"; sourceTree = "<group>"; };
+		3583889217EB9444004757B4 /* bg-select-car@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-select-car@2x.png"; sourceTree = "<group>"; };
+		3583889317EB9444004757B4 /* bg-select-difficulty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-select-difficulty.png"; sourceTree = "<group>"; };
+		3583889417EB9444004757B4 /* bg-select-difficulty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-select-difficulty@2x.png"; sourceTree = "<group>"; };
+		3583889517EB9444004757B4 /* track_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track_1.png; sourceTree = "<group>"; };
+		3583889617EB9444004757B4 /* track_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "track_1@2x.png"; sourceTree = "<group>"; };
+		3583889717EB9444004757B4 /* track_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track_2.png; sourceTree = "<group>"; };
+		3583889817EB9444004757B4 /* track_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "track_2@2x.png"; sourceTree = "<group>"; };
+		3583889917EB9444004757B4 /* track_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track_3.png; sourceTree = "<group>"; };
+		3583889A17EB9444004757B4 /* track_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "track_3@2x.png"; sourceTree = "<group>"; };
+		3583889C17EB9444004757B4 /* base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = base.png; sourceTree = "<group>"; };
+		3583889D17EB9444004757B4 /* base@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "base@2x.png"; sourceTree = "<group>"; };
+		3583889E17EB9444004757B4 /* btn-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-back.png"; sourceTree = "<group>"; };
+		3583889F17EB9444004757B4 /* btn-back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-back@2x.png"; sourceTree = "<group>"; };
+		358388A017EB9444004757B4 /* btn-car1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-car1.png"; sourceTree = "<group>"; };
+		358388A117EB9444004757B4 /* btn-car1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-car1@2x.png"; sourceTree = "<group>"; };
+		358388A217EB9444004757B4 /* btn-car2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-car2.png"; sourceTree = "<group>"; };
+		358388A317EB9444004757B4 /* btn-car2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-car2@2x.png"; sourceTree = "<group>"; };
+		358388A417EB9444004757B4 /* btn-car3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-car3.png"; sourceTree = "<group>"; };
+		358388A517EB9444004757B4 /* btn-car3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-car3@2x.png"; sourceTree = "<group>"; };
+		358388A617EB9444004757B4 /* btn-easy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-easy.png"; sourceTree = "<group>"; };
+		358388A717EB9444004757B4 /* btn-easy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-easy@2x.png"; sourceTree = "<group>"; };
+		358388A817EB9444004757B4 /* btn-gamecenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-gamecenter.png"; sourceTree = "<group>"; };
+		358388A917EB9444004757B4 /* btn-gamecenter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-gamecenter@2x.png"; sourceTree = "<group>"; };
+		358388AA17EB9444004757B4 /* btn-hard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-hard.png"; sourceTree = "<group>"; };
+		358388AB17EB9444004757B4 /* btn-hard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-hard@2x.png"; sourceTree = "<group>"; };
+		358388AC17EB9444004757B4 /* btn-medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-medium.png"; sourceTree = "<group>"; };
+		358388AD17EB9444004757B4 /* btn-medium@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-medium@2x.png"; sourceTree = "<group>"; };
+		358388AE17EB9444004757B4 /* btn-pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-pause.png"; sourceTree = "<group>"; };
+		358388AF17EB9444004757B4 /* btn-pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-pause@2x.png"; sourceTree = "<group>"; };
+		358388B017EB9444004757B4 /* btn-play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-play.png"; sourceTree = "<group>"; };
+		358388B117EB9444004757B4 /* btn-play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-play@2x.png"; sourceTree = "<group>"; };
+		358388B217EB9444004757B4 /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob.png; sourceTree = "<group>"; };
+		358388B317EB9444004757B4 /* knob@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "knob@2x.png"; sourceTree = "<group>"; };
+		358388B417EB9444004757B4 /* steering-wheel-horn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "steering-wheel-horn.png"; sourceTree = "<group>"; };
+		358388B517EB9444004757B4 /* steering-wheel-horn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "steering-wheel-horn@2x.png"; sourceTree = "<group>"; };
+		358388B617EB9444004757B4 /* steering-wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "steering-wheel.png"; sourceTree = "<group>"; };
+		358388B717EB9444004757B4 /* steering-wheel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "steering-wheel@2x.png"; sourceTree = "<group>"; };
+		358388B917EB9444004757B4 /* LevelDetails.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LevelDetails.plist; sourceTree = "<group>"; };
+		358388BD17EB9444004757B4 /* circuitracer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = circuitracer.mp3; sourceTree = "<group>"; };
+		358388C117EB9444004757B4 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
+		358388F717EB9C85004757B4 /* SKAction+SKTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKAction+SKTExtras.h"; sourceTree = "<group>"; };
+		358388F817EB9C85004757B4 /* SKAction+SKTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKAction+SKTExtras.m"; sourceTree = "<group>"; };
+		358388F917EB9C85004757B4 /* SKEmitterNode+SKTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKEmitterNode+SKTExtras.h"; sourceTree = "<group>"; };
+		358388FA17EB9C85004757B4 /* SKEmitterNode+SKTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKEmitterNode+SKTExtras.m"; sourceTree = "<group>"; };
+		358388FB17EB9C85004757B4 /* SKNode+SKTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKNode+SKTExtras.h"; sourceTree = "<group>"; };
+		358388FC17EB9C85004757B4 /* SKNode+SKTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKNode+SKTExtras.m"; sourceTree = "<group>"; };
+		358388FD17EB9C85004757B4 /* SKTAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTAudio.h; sourceTree = "<group>"; };
+		358388FE17EB9C85004757B4 /* SKTAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTAudio.m; sourceTree = "<group>"; };
+		358388FF17EB9C85004757B4 /* SKTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTUtils.h; sourceTree = "<group>"; };
+		3583890017EB9C85004757B4 /* SKTUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SKTUtils.mm; sourceTree = "<group>"; };
+		3583890617EB9CC3004757B4 /* AnalogControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalogControl.h; sourceTree = "<group>"; };
+		3583890717EB9CC3004757B4 /* AnalogControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalogControl.m; sourceTree = "<group>"; };
+		3583890917EBB136004757B4 /* box.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = box.wav; sourceTree = "<group>"; };
+		3583890A17EBB136004757B4 /* button_press.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button_press.wav; sourceTree = "<group>"; };
+		3583890B17EBB136004757B4 /* horn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horn.wav; sourceTree = "<group>"; };
+		3583890C17EBB136004757B4 /* lap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lap.wav; sourceTree = "<group>"; };
+		3583890D17EBB136004757B4 /* nitro.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nitro.wav; sourceTree = "<group>"; };
+		3583891317EBB5A1004757B4 /* SelectCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCarViewController.h; sourceTree = "<group>"; };
+		3583891417EBB5A1004757B4 /* SelectCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCarViewController.m; sourceTree = "<group>"; };
+		3583891617EBB5B3004757B4 /* SelectLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectLevelViewController.h; sourceTree = "<group>"; };
+		3583891717EBB5B3004757B4 /* SelectLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectLevelViewController.m; sourceTree = "<group>"; };
+		612CE75017F458DC00638D02 /* btn-multiplayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-multiplayer.png"; sourceTree = "<group>"; };
+		612CE75117F458DC00638D02 /* btn-multiplayer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-multiplayer@2x.png"; sourceTree = "<group>"; };
+		61B43E1017F53E2B00C1B202 /* MultiplayerNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiplayerNetworking.h; sourceTree = "<group>"; };
+		61B43E1117F53E2B00C1B202 /* MultiplayerNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiplayerNetworking.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3583884617EB934F004757B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3583884F17EB934F004757B4 /* CoreGraphics.framework in Frameworks */,
+				3583885117EB934F004757B4 /* UIKit.framework in Frameworks */,
+				3583885317EB934F004757B4 /* SpriteKit.framework in Frameworks */,
+				3583884D17EB934F004757B4 /* Foundation.framework in Frameworks */,
+				3560458C17F0C56000BFE472 /* GameKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3583886E17EB934F004757B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3583887317EB934F004757B4 /* XCTest.framework in Frameworks */,
+				3583887517EB934F004757B4 /* UIKit.framework in Frameworks */,
+				3583887417EB934F004757B4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3560458D17F0CBE500BFE472 /* GameKit */ = {
+			isa = PBXGroup;
+			children = (
+				3560458E17F0CBFE00BFE472 /* GameKitHelper.h */,
+				3560458F17F0CBFE00BFE472 /* GameKitHelper.m */,
+				3560459417F0CDDD00BFE472 /* CircuitRacerNavigationController.h */,
+				3560459517F0CDDD00BFE472 /* CircuitRacerNavigationController.m */,
+				3560459717F0D07E00BFE472 /* AchievementsHelper.h */,
+				3560459817F0D07E00BFE472 /* AchievementsHelper.m */,
+			);
+			name = GameKit;
+			sourceTree = "<group>";
+		};
+		3583884017EB934F004757B4 = {
+			isa = PBXGroup;
+			children = (
+				3583885417EB934F004757B4 /* CircuitRacer */,
+				3583887817EB934F004757B4 /* CircuitRacerTests */,
+				3583884B17EB934F004757B4 /* Frameworks */,
+				3583884A17EB934F004757B4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3583884A17EB934F004757B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3583884917EB934F004757B4 /* CircuitRacer.app */,
+				3583887117EB934F004757B4 /* CircuitRacerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3583884B17EB934F004757B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3560458B17F0C56000BFE472 /* GameKit.framework */,
+				3583884C17EB934F004757B4 /* Foundation.framework */,
+				3583884E17EB934F004757B4 /* CoreGraphics.framework */,
+				3583885017EB934F004757B4 /* UIKit.framework */,
+				3583885217EB934F004757B4 /* SpriteKit.framework */,
+				3583887217EB934F004757B4 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3583885417EB934F004757B4 /* CircuitRacer */ = {
+			isa = PBXGroup;
+			children = (
+				3560458D17F0CBE500BFE472 /* GameKit */,
+				358388F617EB9C85004757B4 /* SKTUtils */,
+				3583888817EB9444004757B4 /* Art */,
+				3583885D17EB934F004757B4 /* AppDelegate.h */,
+				3583885E17EB934F004757B4 /* AppDelegate.m */,
+				3583886017EB934F004757B4 /* Main.storyboard */,
+				3583886317EB934F004757B4 /* ViewController.h */,
+				3583886417EB934F004757B4 /* ViewController.m */,
+				3583886617EB934F004757B4 /* MyScene.h */,
+				3583886717EB934F004757B4 /* MyScene.m */,
+				61B43E1017F53E2B00C1B202 /* MultiplayerNetworking.h */,
+				61B43E1117F53E2B00C1B202 /* MultiplayerNetworking.m */,
+				3583886917EB934F004757B4 /* Spaceship.png */,
+				3583890617EB9CC3004757B4 /* AnalogControl.h */,
+				3583890717EB9CC3004757B4 /* AnalogControl.m */,
+				3583886B17EB934F004757B4 /* Images.xcassets */,
+				3583885517EB934F004757B4 /* Supporting Files */,
+				3583891317EBB5A1004757B4 /* SelectCarViewController.h */,
+				3583891417EBB5A1004757B4 /* SelectCarViewController.m */,
+				3583891617EBB5B3004757B4 /* SelectLevelViewController.h */,
+				3583891717EBB5B3004757B4 /* SelectLevelViewController.m */,
+				3560459A17F0DA4500BFE472 /* HomeScreenViewController.h */,
+				3560459B17F0DA4500BFE472 /* HomeScreenViewController.m */,
+				3533C9B31803225D00A6DA50 /* SteeringWheelViewController.h */,
+				3533C9B41803225D00A6DA50 /* SteeringWheelViewController.m */,
+			);
+			path = CircuitRacer;
+			sourceTree = "<group>";
+		};
+		3583885517EB934F004757B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3583885617EB934F004757B4 /* CircuitRacer-Info.plist */,
+				3583885717EB934F004757B4 /* InfoPlist.strings */,
+				3583885A17EB934F004757B4 /* main.m */,
+				3583885C17EB934F004757B4 /* CircuitRacer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3583887817EB934F004757B4 /* CircuitRacerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3583887E17EB934F004757B4 /* CircuitRacerTests.m */,
+				3583887917EB934F004757B4 /* Supporting Files */,
+			);
+			path = CircuitRacerTests;
+			sourceTree = "<group>";
+		};
+		3583887917EB934F004757B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3583887A17EB934F004757B4 /* CircuitRacerTests-Info.plist */,
+				3583887B17EB934F004757B4 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3583888817EB9444004757B4 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				3583888917EB9444004757B4 /* AchievementIcons */,
+				3583888E17EB9444004757B4 /* Backgrounds */,
+				3583889B17EB9444004757B4 /* Images */,
+				358388B817EB9444004757B4 /* Levels */,
+				358388BA17EB9444004757B4 /* Sounds */,
+				358388C117EB9444004757B4 /* sprites.atlas */,
+			);
+			path = Art;
+			sourceTree = "<group>";
+		};
+		3583888917EB9444004757B4 /* AchievementIcons */ = {
+			isa = PBXGroup;
+			children = (
+				3583888A17EB9444004757B4 /* achievement-amateur.png */,
+				3583888B17EB9444004757B4 /* achievement-destruction.png */,
+				3583888C17EB9444004757B4 /* achievement-intermediate.png */,
+				3583888D17EB9444004757B4 /* achievement-professional.png */,
+			);
+			path = AchievementIcons;
+			sourceTree = "<group>";
+		};
+		3583888E17EB9444004757B4 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				3583888F17EB9444004757B4 /* bg-main-menu.png */,
+				3583889017EB9444004757B4 /* bg-main-menu@2x.png */,
+				3583889117EB9444004757B4 /* bg-select-car.png */,
+				3583889217EB9444004757B4 /* bg-select-car@2x.png */,
+				3583889317EB9444004757B4 /* bg-select-difficulty.png */,
+				3583889417EB9444004757B4 /* bg-select-difficulty@2x.png */,
+				3583889517EB9444004757B4 /* track_1.png */,
+				3583889617EB9444004757B4 /* track_1@2x.png */,
+				3583889717EB9444004757B4 /* track_2.png */,
+				3583889817EB9444004757B4 /* track_2@2x.png */,
+				3583889917EB9444004757B4 /* track_3.png */,
+				3583889A17EB9444004757B4 /* track_3@2x.png */,
+			);
+			path = Backgrounds;
+			sourceTree = "<group>";
+		};
+		3583889B17EB9444004757B4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				612CE75017F458DC00638D02 /* btn-multiplayer.png */,
+				612CE75117F458DC00638D02 /* btn-multiplayer@2x.png */,
+				3583889C17EB9444004757B4 /* base.png */,
+				3583889D17EB9444004757B4 /* base@2x.png */,
+				3583889E17EB9444004757B4 /* btn-back.png */,
+				3583889F17EB9444004757B4 /* btn-back@2x.png */,
+				358388A017EB9444004757B4 /* btn-car1.png */,
+				358388A117EB9444004757B4 /* btn-car1@2x.png */,
+				358388A217EB9444004757B4 /* btn-car2.png */,
+				358388A317EB9444004757B4 /* btn-car2@2x.png */,
+				358388A417EB9444004757B4 /* btn-car3.png */,
+				358388A517EB9444004757B4 /* btn-car3@2x.png */,
+				358388A617EB9444004757B4 /* btn-easy.png */,
+				358388A717EB9444004757B4 /* btn-easy@2x.png */,
+				358388A817EB9444004757B4 /* btn-gamecenter.png */,
+				358388A917EB9444004757B4 /* btn-gamecenter@2x.png */,
+				358388AA17EB9444004757B4 /* btn-hard.png */,
+				358388AB17EB9444004757B4 /* btn-hard@2x.png */,
+				358388AC17EB9444004757B4 /* btn-medium.png */,
+				358388AD17EB9444004757B4 /* btn-medium@2x.png */,
+				358388AE17EB9444004757B4 /* btn-pause.png */,
+				358388AF17EB9444004757B4 /* btn-pause@2x.png */,
+				358388B017EB9444004757B4 /* btn-play.png */,
+				358388B117EB9444004757B4 /* btn-play@2x.png */,
+				358388B217EB9444004757B4 /* knob.png */,
+				358388B317EB9444004757B4 /* knob@2x.png */,
+				358388B417EB9444004757B4 /* steering-wheel-horn.png */,
+				358388B517EB9444004757B4 /* steering-wheel-horn@2x.png */,
+				358388B617EB9444004757B4 /* steering-wheel.png */,
+				358388B717EB9444004757B4 /* steering-wheel@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		358388B817EB9444004757B4 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				358388B917EB9444004757B4 /* LevelDetails.plist */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
+		358388BA17EB9444004757B4 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				3583890917EBB136004757B4 /* box.wav */,
+				3583890A17EBB136004757B4 /* button_press.wav */,
+				3583890B17EBB136004757B4 /* horn.wav */,
+				3583890C17EBB136004757B4 /* lap.wav */,
+				3583890D17EBB136004757B4 /* nitro.wav */,
+				358388BD17EB9444004757B4 /* circuitracer.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		358388F617EB9C85004757B4 /* SKTUtils */ = {
+			isa = PBXGroup;
+			children = (
+				358388F717EB9C85004757B4 /* SKAction+SKTExtras.h */,
+				358388F817EB9C85004757B4 /* SKAction+SKTExtras.m */,
+				358388F917EB9C85004757B4 /* SKEmitterNode+SKTExtras.h */,
+				358388FA17EB9C85004757B4 /* SKEmitterNode+SKTExtras.m */,
+				358388FB17EB9C85004757B4 /* SKNode+SKTExtras.h */,
+				358388FC17EB9C85004757B4 /* SKNode+SKTExtras.m */,
+				358388FD17EB9C85004757B4 /* SKTAudio.h */,
+				358388FE17EB9C85004757B4 /* SKTAudio.m */,
+				358388FF17EB9C85004757B4 /* SKTUtils.h */,
+				3583890017EB9C85004757B4 /* SKTUtils.mm */,
+			);
+			path = SKTUtils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3583884817EB934F004757B4 /* CircuitRacer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3583888217EB934F004757B4 /* Build configuration list for PBXNativeTarget "CircuitRacer" */;
+			buildPhases = (
+				3583884517EB934F004757B4 /* Sources */,
+				3583884617EB934F004757B4 /* Frameworks */,
+				3583884717EB934F004757B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CircuitRacer;
+			productName = CircuitRacer;
+			productReference = 3583884917EB934F004757B4 /* CircuitRacer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3583887017EB934F004757B4 /* CircuitRacerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3583888517EB934F004757B4 /* Build configuration list for PBXNativeTarget "CircuitRacerTests" */;
+			buildPhases = (
+				3583886D17EB934F004757B4 /* Sources */,
+				3583886E17EB934F004757B4 /* Frameworks */,
+				3583886F17EB934F004757B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3583887717EB934F004757B4 /* PBXTargetDependency */,
+			);
+			name = CircuitRacerTests;
+			productName = CircuitRacerTests;
+			productReference = 3583887117EB934F004757B4 /* CircuitRacerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3583884117EB934F004757B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Razeware LLC";
+				TargetAttributes = {
+					3583884817EB934F004757B4 = {
+						DevelopmentTeam = KFCNEC27GU;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
+					};
+					3583887017EB934F004757B4 = {
+						TestTargetID = 3583884817EB934F004757B4;
+					};
+				};
+			};
+			buildConfigurationList = 3583884417EB934F004757B4 /* Build configuration list for PBXProject "CircuitRacer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3583884017EB934F004757B4;
+			productRefGroup = 3583884A17EB934F004757B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3583884817EB934F004757B4 /* CircuitRacer */,
+				3583887017EB934F004757B4 /* CircuitRacerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3583884717EB934F004757B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				612CE75217F458DC00638D02 /* btn-multiplayer.png in Resources */,
+				358388EB17EB9444004757B4 /* steering-wheel-horn@2x.png in Resources */,
+				612CE75317F458DC00638D02 /* btn-multiplayer@2x.png in Resources */,
+				3583891117EBB136004757B4 /* lap.wav in Resources */,
+				358388CD17EB9444004757B4 /* track_1@2x.png in Resources */,
+				358388DC17EB9444004757B4 /* btn-easy.png in Resources */,
+				358388EA17EB9444004757B4 /* steering-wheel-horn.png in Resources */,
+				358388E417EB9444004757B4 /* btn-pause.png in Resources */,
+				358388C217EB9444004757B4 /* achievement-amateur.png in Resources */,
+				3583885917EB934F004757B4 /* InfoPlist.strings in Resources */,
+				358388C917EB9444004757B4 /* bg-select-car@2x.png in Resources */,
+				358388C517EB9444004757B4 /* achievement-professional.png in Resources */,
+				358388DF17EB9444004757B4 /* btn-gamecenter@2x.png in Resources */,
+				358388C317EB9444004757B4 /* achievement-destruction.png in Resources */,
+				358388D717EB9444004757B4 /* btn-car1@2x.png in Resources */,
+				358388D117EB9444004757B4 /* track_3@2x.png in Resources */,
+				358388D417EB9444004757B4 /* btn-back.png in Resources */,
+				358388E517EB9444004757B4 /* btn-pause@2x.png in Resources */,
+				3583886C17EB934F004757B4 /* Images.xcassets in Resources */,
+				3583891217EBB136004757B4 /* nitro.wav in Resources */,
+				358388D617EB9444004757B4 /* btn-car1.png in Resources */,
+				358388E017EB9444004757B4 /* btn-hard.png in Resources */,
+				358388E817EB9444004757B4 /* knob.png in Resources */,
+				358388C717EB9444004757B4 /* bg-main-menu@2x.png in Resources */,
+				358388E917EB9444004757B4 /* knob@2x.png in Resources */,
+				3583886A17EB934F004757B4 /* Spaceship.png in Resources */,
+				358388EC17EB9444004757B4 /* steering-wheel.png in Resources */,
+				358388CF17EB9444004757B4 /* track_2@2x.png in Resources */,
+				3583890E17EBB136004757B4 /* box.wav in Resources */,
+				358388DD17EB9444004757B4 /* btn-easy@2x.png in Resources */,
+				358388C617EB9444004757B4 /* bg-main-menu.png in Resources */,
+				358388C817EB9444004757B4 /* bg-select-car.png in Resources */,
+				358388E117EB9444004757B4 /* btn-hard@2x.png in Resources */,
+				358388E217EB9444004757B4 /* btn-medium.png in Resources */,
+				358388D017EB9444004757B4 /* track_3.png in Resources */,
+				358388D917EB9444004757B4 /* btn-car2@2x.png in Resources */,
+				358388C417EB9444004757B4 /* achievement-intermediate.png in Resources */,
+				358388CC17EB9444004757B4 /* track_1.png in Resources */,
+				3583886217EB934F004757B4 /* Main.storyboard in Resources */,
+				358388CE17EB9444004757B4 /* track_2.png in Resources */,
+				358388CB17EB9444004757B4 /* bg-select-difficulty@2x.png in Resources */,
+				3583890F17EBB136004757B4 /* button_press.wav in Resources */,
+				358388F117EB9444004757B4 /* circuitracer.mp3 in Resources */,
+				358388CA17EB9444004757B4 /* bg-select-difficulty.png in Resources */,
+				358388F517EB9444004757B4 /* sprites.atlas in Resources */,
+				358388ED17EB9444004757B4 /* steering-wheel@2x.png in Resources */,
+				358388D217EB9444004757B4 /* base.png in Resources */,
+				358388D517EB9444004757B4 /* btn-back@2x.png in Resources */,
+				358388EE17EB9444004757B4 /* LevelDetails.plist in Resources */,
+				358388E617EB9444004757B4 /* btn-play.png in Resources */,
+				358388D817EB9444004757B4 /* btn-car2.png in Resources */,
+				358388DE17EB9444004757B4 /* btn-gamecenter.png in Resources */,
+				358388D317EB9444004757B4 /* base@2x.png in Resources */,
+				358388DB17EB9444004757B4 /* btn-car3@2x.png in Resources */,
+				358388E317EB9444004757B4 /* btn-medium@2x.png in Resources */,
+				3583891017EBB136004757B4 /* horn.wav in Resources */,
+				358388DA17EB9444004757B4 /* btn-car3.png in Resources */,
+				358388E717EB9444004757B4 /* btn-play@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3583886F17EB934F004757B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3583887D17EB934F004757B4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3583884517EB934F004757B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3583886817EB934F004757B4 /* MyScene.m in Sources */,
+				3583891817EBB5B3004757B4 /* SelectLevelViewController.m in Sources */,
+				3583890417EB9C85004757B4 /* SKTAudio.m in Sources */,
+				3560459017F0CBFE00BFE472 /* GameKitHelper.m in Sources */,
+				3583886517EB934F004757B4 /* ViewController.m in Sources */,
+				3583890217EB9C85004757B4 /* SKEmitterNode+SKTExtras.m in Sources */,
+				3583890517EB9C85004757B4 /* SKTUtils.mm in Sources */,
+				3583890117EB9C85004757B4 /* SKAction+SKTExtras.m in Sources */,
+				3560459917F0D07E00BFE472 /* AchievementsHelper.m in Sources */,
+				3533C9B51803225E00A6DA50 /* SteeringWheelViewController.m in Sources */,
+				3583885F17EB934F004757B4 /* AppDelegate.m in Sources */,
+				3583890817EB9CC3004757B4 /* AnalogControl.m in Sources */,
+				3583890317EB9C85004757B4 /* SKNode+SKTExtras.m in Sources */,
+				61B43E1217F53E2B00C1B202 /* MultiplayerNetworking.m in Sources */,
+				3560459617F0CDDD00BFE472 /* CircuitRacerNavigationController.m in Sources */,
+				3560459C17F0DA4500BFE472 /* HomeScreenViewController.m in Sources */,
+				3583885B17EB934F004757B4 /* main.m in Sources */,
+				3583891517EBB5A1004757B4 /* SelectCarViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3583886D17EB934F004757B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3583887F17EB934F004757B4 /* CircuitRacerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3583887717EB934F004757B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3583884817EB934F004757B4 /* CircuitRacer */;
+			targetProxy = 3583887617EB934F004757B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3583885717EB934F004757B4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3583885817EB934F004757B4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3583886017EB934F004757B4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3583886117EB934F004757B4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3583887B17EB934F004757B4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3583887C17EB934F004757B4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3583888017EB934F004757B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3583888117EB934F004757B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3583888317EB934F004757B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CircuitRacer/CircuitRacer-Prefix.pch";
+				INFOPLIST_FILE = "CircuitRacer/CircuitRacer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3583888417EB934F004757B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CircuitRacer/CircuitRacer-Prefix.pch";
+				INFOPLIST_FILE = "CircuitRacer/CircuitRacer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3583888617EB934F004757B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CircuitRacer.app/CircuitRacer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CircuitRacer/CircuitRacer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CircuitRacerTests/CircuitRacerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3583888717EB934F004757B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CircuitRacer.app/CircuitRacer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CircuitRacer/CircuitRacer-Prefix.pch";
+				INFOPLIST_FILE = "CircuitRacerTests/CircuitRacerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3583884417EB934F004757B4 /* Build configuration list for PBXProject "CircuitRacer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3583888017EB934F004757B4 /* Debug */,
+				3583888117EB934F004757B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3583888217EB934F004757B4 /* Build configuration list for PBXNativeTarget "CircuitRacer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3583888317EB934F004757B4 /* Debug */,
+				3583888417EB934F004757B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3583888517EB934F004757B4 /* Build configuration list for PBXNativeTarget "CircuitRacerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3583888617EB934F004757B4 /* Debug */,
+				3583888717EB934F004757B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3583884117EB934F004757B4 /* Project object */;
+}
