@@ -1,0 +1,805 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		355D13BF17D3F3B100D20E1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355D13BE17D3F3B100D20E1D /* Foundation.framework */; };
+		355D13C117D3F3B100D20E1D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355D13C017D3F3B100D20E1D /* CoreGraphics.framework */; };
+		355D13C317D3F3B100D20E1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355D13C217D3F3B100D20E1D /* UIKit.framework */; };
+		355D13C517D3F3B100D20E1D /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355D13C417D3F3B100D20E1D /* SpriteKit.framework */; };
+		355D13CB17D3F3B100D20E1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 355D13C917D3F3B100D20E1D /* InfoPlist.strings */; };
+		355D13CD17D3F3B100D20E1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 355D13CC17D3F3B100D20E1D /* main.m */; };
+		355D13D117D3F3B100D20E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 355D13D017D3F3B100D20E1D /* AppDelegate.m */; };
+		355D13D417D3F3B100D20E1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355D13D217D3F3B100D20E1D /* Main.storyboard */; };
+		355D13D717D3F3B100D20E1D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355D13D617D3F3B100D20E1D /* ViewController.m */; };
+		355D13DA17D3F3B100D20E1D /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 355D13D917D3F3B100D20E1D /* MyScene.m */; };
+		355D13DC17D3F3B100D20E1D /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 355D13DB17D3F3B100D20E1D /* Spaceship.png */; };
+		355D13DE17D3F3B100D20E1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355D13DD17D3F3B100D20E1D /* Images.xcassets */; };
+		355D13E517D3F3B100D20E1D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355D13E417D3F3B100D20E1D /* XCTest.framework */; };
+		355D13E617D3F3B100D20E1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355D13BE17D3F3B100D20E1D /* Foundation.framework */; };
+		355D13E717D3F3B100D20E1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355D13C217D3F3B100D20E1D /* UIKit.framework */; };
+		355D13EF17D3F3B100D20E1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 355D13ED17D3F3B100D20E1D /* InfoPlist.strings */; };
+		355D13F117D3F3B100D20E1D /* PestControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 355D13F017D3F3B100D20E1D /* PestControlTests.m */; };
+		355D140517D3F3BA00D20E1D /* SKAction+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 355D13FC17D3F3B900D20E1D /* SKAction+SKTExtras.m */; };
+		355D140617D3F3BA00D20E1D /* SKEmitterNode+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 355D13FE17D3F3B900D20E1D /* SKEmitterNode+SKTExtras.m */; };
+		355D140717D3F3BA00D20E1D /* SKNode+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 355D140017D3F3B900D20E1D /* SKNode+SKTExtras.m */; };
+		355D140817D3F3BA00D20E1D /* SKTAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 355D140217D3F3B900D20E1D /* SKTAudio.m */; };
+		355D140917D3F3BA00D20E1D /* SKTUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 355D140417D3F3B900D20E1D /* SKTUtils.mm */; };
+		355D144617D3F47800D20E1D /* characters.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 355D140D17D3F47800D20E1D /* characters.atlas */; };
+		355D144717D3F47800D20E1D /* scenery.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 355D140E17D3F47800D20E1D /* scenery.atlas */; };
+		355D144817D3F47800D20E1D /* BugSplatter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 355D141017D3F47800D20E1D /* BugSplatter.sks */; };
+		355D144917D3F47800D20E1D /* FirebugSmoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 355D141117D3F47800D20E1D /* FirebugSmoke.sks */; };
+		355D144A17D3F47800D20E1D /* FirebugSparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = 355D141217D3F47800D20E1D /* FirebugSparks.sks */; };
+		355D144B17D3F47800D20E1D /* Leaf.png in Resources */ = {isa = PBXBuildFile; fileRef = 355D141317D3F47800D20E1D /* Leaf.png */; };
+		355D144C17D3F47800D20E1D /* PlayerHitWall.sks in Resources */ = {isa = PBXBuildFile; fileRef = 355D141417D3F47800D20E1D /* PlayerHitWall.sks */; };
+		355D144D17D3F47800D20E1D /* PlayerTrail.sks in Resources */ = {isa = PBXBuildFile; fileRef = 355D141517D3F47800D20E1D /* PlayerTrail.sks */; };
+		355D144E17D3F47800D20E1D /* Rock.png in Resources */ = {isa = PBXBuildFile; fileRef = 355D141617D3F47800D20E1D /* Rock.png */; };
+		355D144F17D3F47800D20E1D /* Spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 355D141717D3F47800D20E1D /* Spark.png */; };
+		355D145017D3F47800D20E1D /* Splat.png in Resources */ = {isa = PBXBuildFile; fileRef = 355D141817D3F47800D20E1D /* Splat.png */; };
+		355D145117D3F47800D20E1D /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 355D141917D3F47800D20E1D /* Star.png */; };
+		355D145217D3F47800D20E1D /* TreeSmash.sks in Resources */ = {isa = PBXBuildFile; fileRef = 355D141A17D3F47800D20E1D /* TreeSmash.sks */; };
+		355D145317D3F47800D20E1D /* WaterDrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 355D141B17D3F47800D20E1D /* WaterDrop.png */; };
+		355D145417D3F47800D20E1D /* DrownFireBug.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D141D17D3F47800D20E1D /* DrownFireBug.mp3 */; };
+		355D145517D3F47800D20E1D /* HitFireBug.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D141E17D3F47800D20E1D /* HitFireBug.mp3 */; };
+		355D145617D3F47800D20E1D /* HitTree.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D141F17D3F47800D20E1D /* HitTree.mp3 */; };
+		355D145717D3F47800D20E1D /* HitWall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142017D3F47800D20E1D /* HitWall.mp3 */; };
+		355D145817D3F47800D20E1D /* HitWater.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142117D3F47800D20E1D /* HitWater.mp3 */; };
+		355D145917D3F47800D20E1D /* KillBug-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142217D3F47800D20E1D /* KillBug-1.mp3 */; };
+		355D145A17D3F47800D20E1D /* KillBug-10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142317D3F47800D20E1D /* KillBug-10.mp3 */; };
+		355D145B17D3F47800D20E1D /* KillBug-11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142417D3F47800D20E1D /* KillBug-11.mp3 */; };
+		355D145C17D3F47800D20E1D /* KillBug-12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142517D3F47800D20E1D /* KillBug-12.mp3 */; };
+		355D145D17D3F47800D20E1D /* KillBug-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142617D3F47800D20E1D /* KillBug-2.mp3 */; };
+		355D145E17D3F47800D20E1D /* KillBug-3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142717D3F47800D20E1D /* KillBug-3.mp3 */; };
+		355D145F17D3F47800D20E1D /* KillBug-4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142817D3F47800D20E1D /* KillBug-4.mp3 */; };
+		355D146017D3F47800D20E1D /* KillBug-5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142917D3F47800D20E1D /* KillBug-5.mp3 */; };
+		355D146117D3F47800D20E1D /* KillBug-6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142A17D3F47800D20E1D /* KillBug-6.mp3 */; };
+		355D146217D3F47800D20E1D /* KillBug-7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142B17D3F47800D20E1D /* KillBug-7.mp3 */; };
+		355D146317D3F47800D20E1D /* KillBug-8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142C17D3F47800D20E1D /* KillBug-8.mp3 */; };
+		355D146417D3F47800D20E1D /* KillBug-9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142D17D3F47800D20E1D /* KillBug-9.mp3 */; };
+		355D146517D3F47800D20E1D /* Lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142E17D3F47800D20E1D /* Lose.mp3 */; };
+		355D146617D3F47800D20E1D /* Music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D142F17D3F47800D20E1D /* Music.mp3 */; };
+		355D146717D3F47800D20E1D /* PlayerMove.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D143017D3F47800D20E1D /* PlayerMove.mp3 */; };
+		355D146817D3F47800D20E1D /* TickTock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D143117D3F47800D20E1D /* TickTock.mp3 */; };
+		355D146917D3F47800D20E1D /* Win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355D143217D3F47800D20E1D /* Win.mp3 */; };
+		355D146A17D3F47800D20E1D /* SKTEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 355D143517D3F47800D20E1D /* SKTEffects.m */; };
+		355D146B17D3F47800D20E1D /* SKTTimingFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 355D143717D3F47800D20E1D /* SKTTimingFunctions.m */; };
+		355D146C17D3F47800D20E1D /* juicy-level-bg.txt in Resources */ = {isa = PBXBuildFile; fileRef = 355D143917D3F47800D20E1D /* juicy-level-bg.txt */; };
+		355D146D17D3F47800D20E1D /* juicy-level-breakables.txt in Resources */ = {isa = PBXBuildFile; fileRef = 355D143A17D3F47800D20E1D /* juicy-level-breakables.txt */; };
+		355D146E17D3F47800D20E1D /* juicy-level-bugs.txt in Resources */ = {isa = PBXBuildFile; fileRef = 355D143B17D3F47800D20E1D /* juicy-level-bugs.txt */; };
+		355D146F17D3F47800D20E1D /* JuicyLevels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 355D143C17D3F47800D20E1D /* JuicyLevels.plist */; };
+		355D147017D3F47800D20E1D /* level-1-bg.txt in Resources */ = {isa = PBXBuildFile; fileRef = 355D143D17D3F47800D20E1D /* level-1-bg.txt */; };
+		355D147117D3F47800D20E1D /* level-1-bugs.txt in Resources */ = {isa = PBXBuildFile; fileRef = 355D143E17D3F47800D20E1D /* level-1-bugs.txt */; };
+		355D147217D3F47800D20E1D /* level-2-bg.txt in Resources */ = {isa = PBXBuildFile; fileRef = 355D143F17D3F47800D20E1D /* level-2-bg.txt */; };
+		355D147317D3F47800D20E1D /* level-2-breakables.txt in Resources */ = {isa = PBXBuildFile; fileRef = 355D144017D3F47800D20E1D /* level-2-breakables.txt */; };
+		355D147417D3F47800D20E1D /* level-2-bugs.txt in Resources */ = {isa = PBXBuildFile; fileRef = 355D144117D3F47800D20E1D /* level-2-bugs.txt */; };
+		355D147517D3F47800D20E1D /* level-3-sample.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 355D144217D3F47800D20E1D /* level-3-sample.tmx */; };
+		355D147617D3F47800D20E1D /* Levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 355D144317D3F47800D20E1D /* Levels.plist */; };
+		355D147717D3F47800D20E1D /* TileMapLayerLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 355D144517D3F47800D20E1D /* TileMapLayerLoader.m */; };
+		355D147A17D3F73C00D20E1D /* TileMapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 355D147917D3F73C00D20E1D /* TileMapLayer.m */; };
+		355D147D17D3FA2C00D20E1D /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 355D147C17D3FA2C00D20E1D /* Player.m */; };
+		355D148017D3FC0100D20E1D /* Bug.m in Sources */ = {isa = PBXBuildFile; fileRef = 355D147F17D3FC0100D20E1D /* Bug.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		355D13E817D3F3B100D20E1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 355D13B317D3F3B100D20E1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 355D13BA17D3F3B100D20E1D;
+			remoteInfo = PestControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		355D13BB17D3F3B100D20E1D /* PestControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PestControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		355D13BE17D3F3B100D20E1D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		355D13C017D3F3B100D20E1D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		355D13C217D3F3B100D20E1D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		355D13C417D3F3B100D20E1D /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		355D13C817D3F3B100D20E1D /* PestControl-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PestControl-Info.plist"; sourceTree = "<group>"; };
+		355D13CA17D3F3B100D20E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		355D13CC17D3F3B100D20E1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		355D13CE17D3F3B100D20E1D /* PestControl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PestControl-Prefix.pch"; sourceTree = "<group>"; };
+		355D13CF17D3F3B100D20E1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		355D13D017D3F3B100D20E1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		355D13D317D3F3B100D20E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		355D13D517D3F3B100D20E1D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		355D13D617D3F3B100D20E1D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		355D13D817D3F3B100D20E1D /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		355D13D917D3F3B100D20E1D /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		355D13DB17D3F3B100D20E1D /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		355D13DD17D3F3B100D20E1D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		355D13E317D3F3B100D20E1D /* PestControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PestControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		355D13E417D3F3B100D20E1D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		355D13EC17D3F3B100D20E1D /* PestControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PestControlTests-Info.plist"; sourceTree = "<group>"; };
+		355D13EE17D3F3B100D20E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		355D13F017D3F3B100D20E1D /* PestControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PestControlTests.m; sourceTree = "<group>"; };
+		355D13FB17D3F3B900D20E1D /* SKAction+SKTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKAction+SKTExtras.h"; sourceTree = "<group>"; };
+		355D13FC17D3F3B900D20E1D /* SKAction+SKTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKAction+SKTExtras.m"; sourceTree = "<group>"; };
+		355D13FD17D3F3B900D20E1D /* SKEmitterNode+SKTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKEmitterNode+SKTExtras.h"; sourceTree = "<group>"; };
+		355D13FE17D3F3B900D20E1D /* SKEmitterNode+SKTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKEmitterNode+SKTExtras.m"; sourceTree = "<group>"; };
+		355D13FF17D3F3B900D20E1D /* SKNode+SKTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKNode+SKTExtras.h"; sourceTree = "<group>"; };
+		355D140017D3F3B900D20E1D /* SKNode+SKTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKNode+SKTExtras.m"; sourceTree = "<group>"; };
+		355D140117D3F3B900D20E1D /* SKTAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTAudio.h; sourceTree = "<group>"; };
+		355D140217D3F3B900D20E1D /* SKTAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTAudio.m; sourceTree = "<group>"; };
+		355D140317D3F3B900D20E1D /* SKTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTUtils.h; sourceTree = "<group>"; };
+		355D140417D3F3B900D20E1D /* SKTUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SKTUtils.mm; sourceTree = "<group>"; };
+		355D140D17D3F47800D20E1D /* characters.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = characters.atlas; sourceTree = "<group>"; };
+		355D140E17D3F47800D20E1D /* scenery.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = scenery.atlas; sourceTree = "<group>"; };
+		355D141017D3F47800D20E1D /* BugSplatter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BugSplatter.sks; sourceTree = "<group>"; };
+		355D141117D3F47800D20E1D /* FirebugSmoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FirebugSmoke.sks; sourceTree = "<group>"; };
+		355D141217D3F47800D20E1D /* FirebugSparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FirebugSparks.sks; sourceTree = "<group>"; };
+		355D141317D3F47800D20E1D /* Leaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Leaf.png; sourceTree = "<group>"; };
+		355D141417D3F47800D20E1D /* PlayerHitWall.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayerHitWall.sks; sourceTree = "<group>"; };
+		355D141517D3F47800D20E1D /* PlayerTrail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayerTrail.sks; sourceTree = "<group>"; };
+		355D141617D3F47800D20E1D /* Rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rock.png; sourceTree = "<group>"; };
+		355D141717D3F47800D20E1D /* Spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spark.png; sourceTree = "<group>"; };
+		355D141817D3F47800D20E1D /* Splat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Splat.png; sourceTree = "<group>"; };
+		355D141917D3F47800D20E1D /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
+		355D141A17D3F47800D20E1D /* TreeSmash.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TreeSmash.sks; sourceTree = "<group>"; };
+		355D141B17D3F47800D20E1D /* WaterDrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaterDrop.png; sourceTree = "<group>"; };
+		355D141D17D3F47800D20E1D /* DrownFireBug.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DrownFireBug.mp3; sourceTree = "<group>"; };
+		355D141E17D3F47800D20E1D /* HitFireBug.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HitFireBug.mp3; sourceTree = "<group>"; };
+		355D141F17D3F47800D20E1D /* HitTree.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HitTree.mp3; sourceTree = "<group>"; };
+		355D142017D3F47800D20E1D /* HitWall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HitWall.mp3; sourceTree = "<group>"; };
+		355D142117D3F47800D20E1D /* HitWater.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HitWater.mp3; sourceTree = "<group>"; };
+		355D142217D3F47800D20E1D /* KillBug-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "KillBug-1.mp3"; sourceTree = "<group>"; };
+		355D142317D3F47800D20E1D /* KillBug-10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "KillBug-10.mp3"; sourceTree = "<group>"; };
+		355D142417D3F47800D20E1D /* KillBug-11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "KillBug-11.mp3"; sourceTree = "<group>"; };
+		355D142517D3F47800D20E1D /* KillBug-12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "KillBug-12.mp3"; sourceTree = "<group>"; };
+		355D142617D3F47800D20E1D /* KillBug-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "KillBug-2.mp3"; sourceTree = "<group>"; };
+		355D142717D3F47800D20E1D /* KillBug-3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "KillBug-3.mp3"; sourceTree = "<group>"; };
+		355D142817D3F47800D20E1D /* KillBug-4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "KillBug-4.mp3"; sourceTree = "<group>"; };
+		355D142917D3F47800D20E1D /* KillBug-5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "KillBug-5.mp3"; sourceTree = "<group>"; };
+		355D142A17D3F47800D20E1D /* KillBug-6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "KillBug-6.mp3"; sourceTree = "<group>"; };
+		355D142B17D3F47800D20E1D /* KillBug-7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "KillBug-7.mp3"; sourceTree = "<group>"; };
+		355D142C17D3F47800D20E1D /* KillBug-8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "KillBug-8.mp3"; sourceTree = "<group>"; };
+		355D142D17D3F47800D20E1D /* KillBug-9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "KillBug-9.mp3"; sourceTree = "<group>"; };
+		355D142E17D3F47800D20E1D /* Lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Lose.mp3; sourceTree = "<group>"; };
+		355D142F17D3F47800D20E1D /* Music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Music.mp3; sourceTree = "<group>"; };
+		355D143017D3F47800D20E1D /* PlayerMove.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PlayerMove.mp3; sourceTree = "<group>"; };
+		355D143117D3F47800D20E1D /* TickTock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TickTock.mp3; sourceTree = "<group>"; };
+		355D143217D3F47800D20E1D /* Win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Win.mp3; sourceTree = "<group>"; };
+		355D143417D3F47800D20E1D /* SKTEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTEffects.h; sourceTree = "<group>"; };
+		355D143517D3F47800D20E1D /* SKTEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTEffects.m; sourceTree = "<group>"; };
+		355D143617D3F47800D20E1D /* SKTTimingFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTTimingFunctions.h; sourceTree = "<group>"; };
+		355D143717D3F47800D20E1D /* SKTTimingFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTTimingFunctions.m; sourceTree = "<group>"; };
+		355D143917D3F47800D20E1D /* juicy-level-bg.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "juicy-level-bg.txt"; sourceTree = "<group>"; };
+		355D143A17D3F47800D20E1D /* juicy-level-breakables.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "juicy-level-breakables.txt"; sourceTree = "<group>"; };
+		355D143B17D3F47800D20E1D /* juicy-level-bugs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "juicy-level-bugs.txt"; sourceTree = "<group>"; };
+		355D143C17D3F47800D20E1D /* JuicyLevels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JuicyLevels.plist; sourceTree = "<group>"; };
+		355D143D17D3F47800D20E1D /* level-1-bg.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "level-1-bg.txt"; sourceTree = "<group>"; };
+		355D143E17D3F47800D20E1D /* level-1-bugs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "level-1-bugs.txt"; sourceTree = "<group>"; };
+		355D143F17D3F47800D20E1D /* level-2-bg.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "level-2-bg.txt"; sourceTree = "<group>"; };
+		355D144017D3F47800D20E1D /* level-2-breakables.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "level-2-breakables.txt"; sourceTree = "<group>"; };
+		355D144117D3F47800D20E1D /* level-2-bugs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "level-2-bugs.txt"; sourceTree = "<group>"; };
+		355D144217D3F47800D20E1D /* level-3-sample.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "level-3-sample.tmx"; sourceTree = "<group>"; };
+		355D144317D3F47800D20E1D /* Levels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Levels.plist; sourceTree = "<group>"; };
+		355D144417D3F47800D20E1D /* TileMapLayerLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileMapLayerLoader.h; sourceTree = "<group>"; };
+		355D144517D3F47800D20E1D /* TileMapLayerLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileMapLayerLoader.m; sourceTree = "<group>"; };
+		355D147817D3F73C00D20E1D /* TileMapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileMapLayer.h; sourceTree = "<group>"; };
+		355D147917D3F73C00D20E1D /* TileMapLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileMapLayer.m; sourceTree = "<group>"; };
+		355D147B17D3FA2C00D20E1D /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		355D147C17D3FA2C00D20E1D /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		355D147E17D3FC0100D20E1D /* Bug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bug.h; sourceTree = "<group>"; };
+		355D147F17D3FC0100D20E1D /* Bug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bug.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		355D13B817D3F3B100D20E1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355D13C117D3F3B100D20E1D /* CoreGraphics.framework in Frameworks */,
+				355D13C317D3F3B100D20E1D /* UIKit.framework in Frameworks */,
+				355D13C517D3F3B100D20E1D /* SpriteKit.framework in Frameworks */,
+				355D13BF17D3F3B100D20E1D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		355D13E017D3F3B100D20E1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355D13E517D3F3B100D20E1D /* XCTest.framework in Frameworks */,
+				355D13E717D3F3B100D20E1D /* UIKit.framework in Frameworks */,
+				355D13E617D3F3B100D20E1D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		355D13B217D3F3B100D20E1D = {
+			isa = PBXGroup;
+			children = (
+				355D13C617D3F3B100D20E1D /* PestControl */,
+				355D13EA17D3F3B100D20E1D /* PestControlTests */,
+				355D13BD17D3F3B100D20E1D /* Frameworks */,
+				355D13BC17D3F3B100D20E1D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		355D13BC17D3F3B100D20E1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				355D13BB17D3F3B100D20E1D /* PestControl.app */,
+				355D13E317D3F3B100D20E1D /* PestControlTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		355D13BD17D3F3B100D20E1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				355D13BE17D3F3B100D20E1D /* Foundation.framework */,
+				355D13C017D3F3B100D20E1D /* CoreGraphics.framework */,
+				355D13C217D3F3B100D20E1D /* UIKit.framework */,
+				355D13C417D3F3B100D20E1D /* SpriteKit.framework */,
+				355D13E417D3F3B100D20E1D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		355D13C617D3F3B100D20E1D /* PestControl */ = {
+			isa = PBXGroup;
+			children = (
+				355D140A17D3F47800D20E1D /* Resources */,
+				355D13FA17D3F3B900D20E1D /* SKTUtils */,
+				355D13CF17D3F3B100D20E1D /* AppDelegate.h */,
+				355D13D017D3F3B100D20E1D /* AppDelegate.m */,
+				355D13D217D3F3B100D20E1D /* Main.storyboard */,
+				355D13D517D3F3B100D20E1D /* ViewController.h */,
+				355D13D617D3F3B100D20E1D /* ViewController.m */,
+				355D13D817D3F3B100D20E1D /* MyScene.h */,
+				355D13D917D3F3B100D20E1D /* MyScene.m */,
+				355D13DB17D3F3B100D20E1D /* Spaceship.png */,
+				355D13DD17D3F3B100D20E1D /* Images.xcassets */,
+				355D13C717D3F3B100D20E1D /* Supporting Files */,
+				355D147817D3F73C00D20E1D /* TileMapLayer.h */,
+				355D147917D3F73C00D20E1D /* TileMapLayer.m */,
+				355D147B17D3FA2C00D20E1D /* Player.h */,
+				355D147C17D3FA2C00D20E1D /* Player.m */,
+				355D147E17D3FC0100D20E1D /* Bug.h */,
+				355D147F17D3FC0100D20E1D /* Bug.m */,
+			);
+			path = PestControl;
+			sourceTree = "<group>";
+		};
+		355D13C717D3F3B100D20E1D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				355D13C817D3F3B100D20E1D /* PestControl-Info.plist */,
+				355D13C917D3F3B100D20E1D /* InfoPlist.strings */,
+				355D13CC17D3F3B100D20E1D /* main.m */,
+				355D13CE17D3F3B100D20E1D /* PestControl-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		355D13EA17D3F3B100D20E1D /* PestControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				355D13F017D3F3B100D20E1D /* PestControlTests.m */,
+				355D13EB17D3F3B100D20E1D /* Supporting Files */,
+			);
+			path = PestControlTests;
+			sourceTree = "<group>";
+		};
+		355D13EB17D3F3B100D20E1D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				355D13EC17D3F3B100D20E1D /* PestControlTests-Info.plist */,
+				355D13ED17D3F3B100D20E1D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		355D13FA17D3F3B900D20E1D /* SKTUtils */ = {
+			isa = PBXGroup;
+			children = (
+				355D13FB17D3F3B900D20E1D /* SKAction+SKTExtras.h */,
+				355D13FC17D3F3B900D20E1D /* SKAction+SKTExtras.m */,
+				355D13FD17D3F3B900D20E1D /* SKEmitterNode+SKTExtras.h */,
+				355D13FE17D3F3B900D20E1D /* SKEmitterNode+SKTExtras.m */,
+				355D13FF17D3F3B900D20E1D /* SKNode+SKTExtras.h */,
+				355D140017D3F3B900D20E1D /* SKNode+SKTExtras.m */,
+				355D140117D3F3B900D20E1D /* SKTAudio.h */,
+				355D140217D3F3B900D20E1D /* SKTAudio.m */,
+				355D140317D3F3B900D20E1D /* SKTUtils.h */,
+				355D140417D3F3B900D20E1D /* SKTUtils.mm */,
+			);
+			path = SKTUtils;
+			sourceTree = "<group>";
+		};
+		355D140A17D3F47800D20E1D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				355D140B17D3F47800D20E1D /* Art */,
+				355D143317D3F47800D20E1D /* Extra Source Code */,
+				355D143817D3F47800D20E1D /* Levels */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		355D140B17D3F47800D20E1D /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				355D140C17D3F47800D20E1D /* Images */,
+				355D140F17D3F47800D20E1D /* Particles */,
+				355D141C17D3F47800D20E1D /* Sounds */,
+			);
+			path = Art;
+			sourceTree = "<group>";
+		};
+		355D140C17D3F47800D20E1D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				355D140D17D3F47800D20E1D /* characters.atlas */,
+				355D140E17D3F47800D20E1D /* scenery.atlas */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		355D140F17D3F47800D20E1D /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				355D141017D3F47800D20E1D /* BugSplatter.sks */,
+				355D141117D3F47800D20E1D /* FirebugSmoke.sks */,
+				355D141217D3F47800D20E1D /* FirebugSparks.sks */,
+				355D141317D3F47800D20E1D /* Leaf.png */,
+				355D141417D3F47800D20E1D /* PlayerHitWall.sks */,
+				355D141517D3F47800D20E1D /* PlayerTrail.sks */,
+				355D141617D3F47800D20E1D /* Rock.png */,
+				355D141717D3F47800D20E1D /* Spark.png */,
+				355D141817D3F47800D20E1D /* Splat.png */,
+				355D141917D3F47800D20E1D /* Star.png */,
+				355D141A17D3F47800D20E1D /* TreeSmash.sks */,
+				355D141B17D3F47800D20E1D /* WaterDrop.png */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
+		355D141C17D3F47800D20E1D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				355D141D17D3F47800D20E1D /* DrownFireBug.mp3 */,
+				355D141E17D3F47800D20E1D /* HitFireBug.mp3 */,
+				355D141F17D3F47800D20E1D /* HitTree.mp3 */,
+				355D142017D3F47800D20E1D /* HitWall.mp3 */,
+				355D142117D3F47800D20E1D /* HitWater.mp3 */,
+				355D142217D3F47800D20E1D /* KillBug-1.mp3 */,
+				355D142317D3F47800D20E1D /* KillBug-10.mp3 */,
+				355D142417D3F47800D20E1D /* KillBug-11.mp3 */,
+				355D142517D3F47800D20E1D /* KillBug-12.mp3 */,
+				355D142617D3F47800D20E1D /* KillBug-2.mp3 */,
+				355D142717D3F47800D20E1D /* KillBug-3.mp3 */,
+				355D142817D3F47800D20E1D /* KillBug-4.mp3 */,
+				355D142917D3F47800D20E1D /* KillBug-5.mp3 */,
+				355D142A17D3F47800D20E1D /* KillBug-6.mp3 */,
+				355D142B17D3F47800D20E1D /* KillBug-7.mp3 */,
+				355D142C17D3F47800D20E1D /* KillBug-8.mp3 */,
+				355D142D17D3F47800D20E1D /* KillBug-9.mp3 */,
+				355D142E17D3F47800D20E1D /* Lose.mp3 */,
+				355D142F17D3F47800D20E1D /* Music.mp3 */,
+				355D143017D3F47800D20E1D /* PlayerMove.mp3 */,
+				355D143117D3F47800D20E1D /* TickTock.mp3 */,
+				355D143217D3F47800D20E1D /* Win.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		355D143317D3F47800D20E1D /* Extra Source Code */ = {
+			isa = PBXGroup;
+			children = (
+				355D143417D3F47800D20E1D /* SKTEffects.h */,
+				355D143517D3F47800D20E1D /* SKTEffects.m */,
+				355D143617D3F47800D20E1D /* SKTTimingFunctions.h */,
+				355D143717D3F47800D20E1D /* SKTTimingFunctions.m */,
+			);
+			path = "Extra Source Code";
+			sourceTree = "<group>";
+		};
+		355D143817D3F47800D20E1D /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				355D143917D3F47800D20E1D /* juicy-level-bg.txt */,
+				355D143A17D3F47800D20E1D /* juicy-level-breakables.txt */,
+				355D143B17D3F47800D20E1D /* juicy-level-bugs.txt */,
+				355D143C17D3F47800D20E1D /* JuicyLevels.plist */,
+				355D143D17D3F47800D20E1D /* level-1-bg.txt */,
+				355D143E17D3F47800D20E1D /* level-1-bugs.txt */,
+				355D143F17D3F47800D20E1D /* level-2-bg.txt */,
+				355D144017D3F47800D20E1D /* level-2-breakables.txt */,
+				355D144117D3F47800D20E1D /* level-2-bugs.txt */,
+				355D144217D3F47800D20E1D /* level-3-sample.tmx */,
+				355D144317D3F47800D20E1D /* Levels.plist */,
+				355D144417D3F47800D20E1D /* TileMapLayerLoader.h */,
+				355D144517D3F47800D20E1D /* TileMapLayerLoader.m */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		355D13BA17D3F3B100D20E1D /* PestControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 355D13F417D3F3B100D20E1D /* Build configuration list for PBXNativeTarget "PestControl" */;
+			buildPhases = (
+				355D13B717D3F3B100D20E1D /* Sources */,
+				355D13B817D3F3B100D20E1D /* Frameworks */,
+				355D13B917D3F3B100D20E1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PestControl;
+			productName = PestControl;
+			productReference = 355D13BB17D3F3B100D20E1D /* PestControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		355D13E217D3F3B100D20E1D /* PestControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 355D13F717D3F3B100D20E1D /* Build configuration list for PBXNativeTarget "PestControlTests" */;
+			buildPhases = (
+				355D13DF17D3F3B100D20E1D /* Sources */,
+				355D13E017D3F3B100D20E1D /* Frameworks */,
+				355D13E117D3F3B100D20E1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				355D13E917D3F3B100D20E1D /* PBXTargetDependency */,
+			);
+			name = PestControlTests;
+			productName = PestControlTests;
+			productReference = 355D13E317D3F3B100D20E1D /* PestControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		355D13B317D3F3B100D20E1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Razeware LLC";
+				TargetAttributes = {
+					355D13E217D3F3B100D20E1D = {
+						TestTargetID = 355D13BA17D3F3B100D20E1D;
+					};
+				};
+			};
+			buildConfigurationList = 355D13B617D3F3B100D20E1D /* Build configuration list for PBXProject "PestControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 355D13B217D3F3B100D20E1D;
+			productRefGroup = 355D13BC17D3F3B100D20E1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				355D13BA17D3F3B100D20E1D /* PestControl */,
+				355D13E217D3F3B100D20E1D /* PestControlTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		355D13B917D3F3B100D20E1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355D146017D3F47800D20E1D /* KillBug-5.mp3 in Resources */,
+				355D144A17D3F47800D20E1D /* FirebugSparks.sks in Resources */,
+				355D146F17D3F47800D20E1D /* JuicyLevels.plist in Resources */,
+				355D147417D3F47800D20E1D /* level-2-bugs.txt in Resources */,
+				355D144C17D3F47800D20E1D /* PlayerHitWall.sks in Resources */,
+				355D147317D3F47800D20E1D /* level-2-breakables.txt in Resources */,
+				355D147117D3F47800D20E1D /* level-1-bugs.txt in Resources */,
+				355D146917D3F47800D20E1D /* Win.mp3 in Resources */,
+				355D145F17D3F47800D20E1D /* KillBug-4.mp3 in Resources */,
+				355D13CB17D3F3B100D20E1D /* InfoPlist.strings in Resources */,
+				355D144717D3F47800D20E1D /* scenery.atlas in Resources */,
+				355D144E17D3F47800D20E1D /* Rock.png in Resources */,
+				355D146D17D3F47800D20E1D /* juicy-level-breakables.txt in Resources */,
+				355D145B17D3F47800D20E1D /* KillBug-11.mp3 in Resources */,
+				355D145117D3F47800D20E1D /* Star.png in Resources */,
+				355D146517D3F47800D20E1D /* Lose.mp3 in Resources */,
+				355D146E17D3F47800D20E1D /* juicy-level-bugs.txt in Resources */,
+				355D146717D3F47800D20E1D /* PlayerMove.mp3 in Resources */,
+				355D145A17D3F47800D20E1D /* KillBug-10.mp3 in Resources */,
+				355D145317D3F47800D20E1D /* WaterDrop.png in Resources */,
+				355D144917D3F47800D20E1D /* FirebugSmoke.sks in Resources */,
+				355D13DE17D3F3B100D20E1D /* Images.xcassets in Resources */,
+				355D13DC17D3F3B100D20E1D /* Spaceship.png in Resources */,
+				355D147017D3F47800D20E1D /* level-1-bg.txt in Resources */,
+				355D144817D3F47800D20E1D /* BugSplatter.sks in Resources */,
+				355D145C17D3F47800D20E1D /* KillBug-12.mp3 in Resources */,
+				355D146617D3F47800D20E1D /* Music.mp3 in Resources */,
+				355D145917D3F47800D20E1D /* KillBug-1.mp3 in Resources */,
+				355D144B17D3F47800D20E1D /* Leaf.png in Resources */,
+				355D144617D3F47800D20E1D /* characters.atlas in Resources */,
+				355D146C17D3F47800D20E1D /* juicy-level-bg.txt in Resources */,
+				355D13D417D3F3B100D20E1D /* Main.storyboard in Resources */,
+				355D144D17D3F47800D20E1D /* PlayerTrail.sks in Resources */,
+				355D144F17D3F47800D20E1D /* Spark.png in Resources */,
+				355D147517D3F47800D20E1D /* level-3-sample.tmx in Resources */,
+				355D145D17D3F47800D20E1D /* KillBug-2.mp3 in Resources */,
+				355D145017D3F47800D20E1D /* Splat.png in Resources */,
+				355D146117D3F47800D20E1D /* KillBug-6.mp3 in Resources */,
+				355D145817D3F47800D20E1D /* HitWater.mp3 in Resources */,
+				355D145517D3F47800D20E1D /* HitFireBug.mp3 in Resources */,
+				355D146417D3F47800D20E1D /* KillBug-9.mp3 in Resources */,
+				355D145217D3F47800D20E1D /* TreeSmash.sks in Resources */,
+				355D146317D3F47800D20E1D /* KillBug-8.mp3 in Resources */,
+				355D146817D3F47800D20E1D /* TickTock.mp3 in Resources */,
+				355D145E17D3F47800D20E1D /* KillBug-3.mp3 in Resources */,
+				355D145617D3F47800D20E1D /* HitTree.mp3 in Resources */,
+				355D145717D3F47800D20E1D /* HitWall.mp3 in Resources */,
+				355D147617D3F47800D20E1D /* Levels.plist in Resources */,
+				355D147217D3F47800D20E1D /* level-2-bg.txt in Resources */,
+				355D145417D3F47800D20E1D /* DrownFireBug.mp3 in Resources */,
+				355D146217D3F47800D20E1D /* KillBug-7.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		355D13E117D3F3B100D20E1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355D13EF17D3F3B100D20E1D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		355D13B717D3F3B100D20E1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355D148017D3FC0100D20E1D /* Bug.m in Sources */,
+				355D13DA17D3F3B100D20E1D /* MyScene.m in Sources */,
+				355D146A17D3F47800D20E1D /* SKTEffects.m in Sources */,
+				355D140817D3F3BA00D20E1D /* SKTAudio.m in Sources */,
+				355D147A17D3F73C00D20E1D /* TileMapLayer.m in Sources */,
+				355D13D717D3F3B100D20E1D /* ViewController.m in Sources */,
+				355D140617D3F3BA00D20E1D /* SKEmitterNode+SKTExtras.m in Sources */,
+				355D146B17D3F47800D20E1D /* SKTTimingFunctions.m in Sources */,
+				355D140917D3F3BA00D20E1D /* SKTUtils.mm in Sources */,
+				355D147717D3F47800D20E1D /* TileMapLayerLoader.m in Sources */,
+				355D140517D3F3BA00D20E1D /* SKAction+SKTExtras.m in Sources */,
+				355D13D117D3F3B100D20E1D /* AppDelegate.m in Sources */,
+				355D140717D3F3BA00D20E1D /* SKNode+SKTExtras.m in Sources */,
+				355D147D17D3FA2C00D20E1D /* Player.m in Sources */,
+				355D13CD17D3F3B100D20E1D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		355D13DF17D3F3B100D20E1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355D13F117D3F3B100D20E1D /* PestControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		355D13E917D3F3B100D20E1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 355D13BA17D3F3B100D20E1D /* PestControl */;
+			targetProxy = 355D13E817D3F3B100D20E1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		355D13C917D3F3B100D20E1D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				355D13CA17D3F3B100D20E1D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		355D13D217D3F3B100D20E1D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				355D13D317D3F3B100D20E1D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		355D13ED17D3F3B100D20E1D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				355D13EE17D3F3B100D20E1D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		355D13F217D3F3B100D20E1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		355D13F317D3F3B100D20E1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		355D13F517D3F3B100D20E1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PestControl/PestControl-Prefix.pch";
+				INFOPLIST_FILE = "PestControl/PestControl-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		355D13F617D3F3B100D20E1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PestControl/PestControl-Prefix.pch";
+				INFOPLIST_FILE = "PestControl/PestControl-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		355D13F817D3F3B100D20E1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PestControl.app/PestControl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PestControl/PestControl-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PestControlTests/PestControlTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		355D13F917D3F3B100D20E1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PestControl.app/PestControl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PestControl/PestControl-Prefix.pch";
+				INFOPLIST_FILE = "PestControlTests/PestControlTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		355D13B617D3F3B100D20E1D /* Build configuration list for PBXProject "PestControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				355D13F217D3F3B100D20E1D /* Debug */,
+				355D13F317D3F3B100D20E1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		355D13F417D3F3B100D20E1D /* Build configuration list for PBXNativeTarget "PestControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				355D13F517D3F3B100D20E1D /* Debug */,
+				355D13F617D3F3B100D20E1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		355D13F717D3F3B100D20E1D /* Build configuration list for PBXNativeTarget "PestControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				355D13F817D3F3B100D20E1D /* Debug */,
+				355D13F917D3F3B100D20E1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 355D13B317D3F3B100D20E1D /* Project object */;
+}

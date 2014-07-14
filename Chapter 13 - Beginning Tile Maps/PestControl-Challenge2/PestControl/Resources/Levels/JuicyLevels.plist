@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>levels</key>
+	<array>
+		<dict>
+			<key>timeLimit</key>
+			<integer>300</integer>
+			<key>layers</key>
+			<dict>
+				<key>background</key>
+				<string>juicy-level-bg.txt</string>
+				<key>breakables</key>
+				<string>juicy-level-breakables.txt</string>
+				<key>bugs</key>
+				<string>juicy-level-bugs.txt</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
