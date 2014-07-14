@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[MultiplayerNetworking match:didReceiveData:fromPlayer:]:MultiplayerNetworking.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MultiplayerNetworking processReceivedRandomNumber:]:MultiplayerNetworking.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[GameKitHelper sharedGameKitHelper].playersDictionary">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MultiplayerNetworking allRandomNumbersAreReceived]:MultiplayerNetworking.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[GameKitHelper sharedGameKitHelper].multiplayerMatch.playerIDs.count">
+            </PersistentString>
+            <PersistentString
+               value = "[GameKitHelper shareGameKitHelper].multiplayerMatch.playerIDs.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
