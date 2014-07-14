@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>blocks</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>WonkyBlock</string>
+			<key>rect</key>
+			<string>{{270, 80}, {220, 30}}</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>WonkyBlock</string>
+			<key>rect</key>
+			<string>{{220, 20}, {30,85}}</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>WonkyBlock</string>
+			<key>rect</key>
+			<string>{{220, 20}, {300,15}}</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>WonkyBlock</string>
+			<key>rect</key>
+			<string>{{320, 20}, {30,85}}</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>WonkyBlock</string>
+			<key>rect</key>
+			<string>{{320, 20}, {300,15}}</string>
+		</dict>
+	</array>
+	<key>catPosition</key>
+	<string>{270,125}</string>
+	<key>bedPosition</key>
+	<string>{270,15}</string>
+</dict>
+</plist>
