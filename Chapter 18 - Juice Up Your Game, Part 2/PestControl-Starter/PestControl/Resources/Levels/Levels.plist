@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>levels</key>
+	<array>
+		<dict>
+			<key>timeLimit</key>
+			<integer>10</integer>
+			<key>layers</key>
+			<dict>
+				<key>background</key>
+				<string>level-1-bg.txt</string>
+				<key>bugs</key>
+				<string>level-1-bugs.txt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>timeLimit</key>
+			<integer>200</integer>
+			<key>layers</key>
+			<dict>
+				<key>background</key>
+				<string>level-2-bg.txt</string>
+				<key>bugs</key>
+				<string>level-2-bugs.txt</string>
+				<key>breakables</key>
+				<string>level-2-breakables.txt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>timeLimit</key>
+			<string>200</string>
+			<key>tmxFile</key>
+			<string>level-3-sample.tmx</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,405 @@
+//
+//  MyScene.m
+//  PestControl
+//
+//  Created by Main Account on 9/1/13.
+//  Copyright (c) 2013 Razeware LLC. All rights reserved.
+//
+
+#import "MyScene.h"
+#import "TileMapLayer.h"
+#import "TileMapLayerLoader.h"
+#import "Player.h"
+#import "Bug.h"
+#import "Breakable.h"
+#import "FireBug.h"
+#import "TmxTileMapLayer.h"
+
+typedef NS_ENUM(int32_t, PCGameState)
+{
+  PCGameStateStartingLevel,
+  PCGameStatePlaying,
+  PCGameStateInLevelMenu,
+};
+
+@interface MyScene () <SKPhysicsContactDelegate>
+@end
+
+@implementation MyScene {
+  SKNode *_worldNode;
+  TileMapLayer *_bgLayer;
+  Player *_player;
+  TileMapLayer *_bugLayer;
+  TileMapLayer *_breakableLayer;
+  JSTileMap *_tileMap;
+  PCGameState _gameState;
+  int _level;
+  double _levelTimeLimit;
+  SKLabelNode* _timerLabel;
+  double _currentTime;
+  double _startTime;
+  double _elapsedTime;
+}
+
+- (instancetype)initWithSize:(CGSize)size level:(int)level 
+{
+  if (self = [super initWithSize:size]) {
+    NSDictionary *config =
+      [NSDictionary dictionaryWithContentsOfFile:
+       [[NSBundle mainBundle] pathForResource:@"Levels"
+                                       ofType:@"plist"]];
+
+    if (level < 0 || level >= [config[@"levels"] count])
+      level = 0;
+    _level = level;
+    NSDictionary *levelData = config[@"levels"][level];
+    if (levelData[@"tmxFile"]) {
+      _tileMap = [JSTileMap mapNamed:levelData[@"tmxFile"]];
+    }
+
+    [self createWorld:levelData];
+    [self createCharacters:levelData];
+    [self centerViewOn:_player.position];
+    _levelTimeLimit = [levelData[@"timeLimit"] doubleValue];
+    [self createUserInterface];
+    _gameState = PCGameStateStartingLevel;
+  }
+  return self;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  switch (_gameState) {
+    case PCGameStateStartingLevel:
+    {
+      [self childNodeWithName:@"msgLabel"].hidden = YES;
+      _gameState = PCGameStatePlaying;
+      self.paused = NO;
+      _timerLabel.hidden = NO;
+      _startTime = _currentTime;
+      // Intentionally omitted break
+    }
+    case PCGameStatePlaying:
+    {
+      UITouch* touch = [touches anyObject];
+      [_player moveToward:[touch locationInNode:_worldNode]];
+      break;
+    }
+    case PCGameStateInLevelMenu:
+    {
+      UITouch* touch = [touches anyObject];
+      CGPoint loc = [touch locationInNode:self];
+          
+      SKNode *node = [self childNodeWithName:@"nextLevelLabel"];
+      if ([node containsPoint:loc]) {
+        MyScene *newScene = [[MyScene alloc] initWithSize:self.size
+                                                    level:_level+1];
+        [self.view presentScene:newScene
+                     transition:[SKTransition
+                                 flipVerticalWithDuration:0.5]];
+      } else {
+        node = [self childNodeWithName:@"retryLabel"];
+        if ([node containsPoint:loc]) {
+          MyScene *newScene = [[MyScene alloc] initWithSize:self.size 
+                                                      level:_level];
+          [self.view presentScene:newScene
+                       transition:[SKTransition
+                                   flipVerticalWithDuration:0.5]];
+        }
+      }
+      break;
+    }
+  }
+}
+
+- (TileMapLayer *)createScenery:(NSDictionary *)levelData
+{
+  if (_tileMap) {
+    return [[TmxTileMapLayer alloc] initWithTmxLayer:
+             [_tileMap layerNamed:@"Background"]];
+  } else {
+    NSDictionary *layerFiles = levelData[@"layers"];
+    return [TileMapLayerLoader tileMapLayerFromFileNamed:
+              layerFiles[@"background"]];
+  }
+}
+
+- (void)createWorld:(NSDictionary *)levelData
+{
+  _bgLayer = [self createScenery:levelData];
+  
+  _worldNode = [SKNode node];
+  if (_tileMap) {
+    [_worldNode addChild:_tileMap];
+  }
+  [_worldNode addChild:_bgLayer];
+  [self addChild:_worldNode];
+  
+  self.anchorPoint = CGPointMake(0.5, 0.5);
+  _worldNode.position =
+    CGPointMake(-_bgLayer.layerSize.width / 2,
+                -_bgLayer.layerSize.height / 2);
+  
+  self.physicsWorld.gravity = CGVectorMake(0, 0);
+  
+  SKNode *bounds = [SKNode node];
+  bounds.physicsBody =
+    [SKPhysicsBody bodyWithEdgeLoopFromRect:
+      CGRectMake(0, 0, 
+                 _bgLayer.layerSize.width,
+                 _bgLayer.layerSize.height)];
+  bounds.physicsBody.categoryBitMask = PCBoundaryCategory;
+  bounds.physicsBody.friction = 0;
+  [_worldNode addChild:bounds];
+  
+  self.physicsWorld.contactDelegate = self;
+  
+  _breakableLayer = [self createBreakables:levelData];
+  if (_breakableLayer) {
+    [_worldNode addChild:_breakableLayer];
+  }
+  
+  if (_tileMap) {
+    [self createCollisionAreas];
+  }
+}
+
+- (void)centerViewOn:(CGPoint)centerOn
+{
+  _worldNode.position = [self pointToCenterViewOn:centerOn];
+}
+
+- (void)createCharacters:(NSDictionary *)levelData
+{
+  if (_tileMap) {
+    _bugLayer = [[TmxTileMapLayer alloc]
+                 initWithTmxObjectGroup:[_tileMap
+                                         groupNamed:@"Bugs"]
+                 tileSize:_tileMap.tileSize
+                 gridSize:_bgLayer.gridSize];
+  } else {
+    NSDictionary *layerFiles = levelData[@"layers"];
+    _bugLayer = [TileMapLayerLoader tileMapLayerFromFileNamed:
+                 layerFiles[@"bugs"]];
+  }
+  
+  [_worldNode addChild:_bugLayer];
+  
+  _player = (Player *)[_bugLayer childNodeWithName:@"player"];
+  [_player removeFromParent];
+  [_worldNode addChild:_player];
+  
+  [_bugLayer enumerateChildNodesWithName:@"bug"
+                              usingBlock:
+    ^(SKNode *node, BOOL *stop){
+      [(Bug*)node start];
+    }];
+}
+
+- (void)didSimulatePhysics
+{
+  CGPoint target = [self pointToCenterViewOn:_player.position];
+  
+  CGPoint newPosition = _worldNode.position;
+  newPosition.x += (target.x - _worldNode.position.x) * 0.1f;
+  newPosition.y += (target.y - _worldNode.position.y) * 0.1f;
+    
+  _worldNode.position = newPosition;
+}
+
+- (CGPoint)pointToCenterViewOn:(CGPoint)centerOn
+{
+  CGSize size = self.size;
+  
+  CGFloat x = Clamp(centerOn.x, size.width / 2,
+                    _bgLayer.layerSize.width - size.width / 2);
+  
+  CGFloat y = Clamp(centerOn.y, size.height / 2,
+                    _bgLayer.layerSize.height - size.height/2);
+  
+  return CGPointMake(-x, -y);
+}
+
+- (void)didBeginContact:(SKPhysicsContact *)contact
+{
+  SKPhysicsBody *other =
+  (contact.bodyA.categoryBitMask == PCPlayerCategory ?
+   contact.bodyB : contact.bodyA);
+  
+  if (other.categoryBitMask == PCBugCategory) {
+    [other.node removeFromParent];
+  }
+  else if (other.categoryBitMask & PCBreakableCategory) {
+    Breakable *breakable = (Breakable *)other.node;
+    [breakable smashBreakable];
+  }
+  else if (other.categoryBitMask & PCFireBugCategory) {
+    FireBug *fireBug = (FireBug *)other.node;
+    [fireBug kickBug];
+  }
+
+}
+
+- (BOOL)tileAtCoord:(CGPoint)coord hasAnyProps:(uint32_t)props
+{
+  return [self tileAtPoint:[_bgLayer pointForCoord:coord]
+               hasAnyProps:props];
+}
+
+- (BOOL)tileAtPoint:(CGPoint)point hasAnyProps:(uint32_t)props
+{
+  SKNode *tile = [_breakableLayer tileAtPoint:point];
+  if (!tile)
+    tile = [_bgLayer tileAtPoint:point];
+  return tile.physicsBody.categoryBitMask & props;
+}
+
+- (void)didEndContact:(SKPhysicsContact *)contact
+{
+  // 1
+  SKPhysicsBody *other =
+  (contact.bodyA.categoryBitMask == PCPlayerCategory ?
+   contact.bodyB : contact.bodyA);
+  
+  // 2
+  if (other.categoryBitMask &
+      _player.physicsBody.collisionBitMask) {
+    // 3
+    [_player faceCurrentDirection];
+  }
+}
+
+- (TileMapLayer *)createBreakables:(NSDictionary *)levelData
+{
+  if (_tileMap) {
+    TMXLayer *breakables = [_tileMap layerNamed:@"Breakables"];
+    return
+      (breakables ?
+       [[TmxTileMapLayer alloc] initWithTmxLayer:breakables] :
+       nil);
+  } else {
+    NSDictionary *layerFiles = levelData[@"layers"];
+    return [TileMapLayerLoader tileMapLayerFromFileNamed:
+            layerFiles[@"breakables"]];
+  }
+}
+
+- (void)createCollisionAreas
+{
+  TMXObjectGroup *group = 
+    [_tileMap groupNamed:@"CollisionAreas"];
+  
+  NSArray *waterObjects = [group objectsNamed:@"water"];
+  for (NSDictionary *waterObj in waterObjects) {
+    CGFloat x = [waterObj[@"x"] floatValue];
+    CGFloat y = [waterObj[@"y"] floatValue];
+    CGFloat w = [waterObj[@"width"] floatValue];
+    CGFloat h = [waterObj[@"height"] floatValue];
+    
+    SKSpriteNode* water =
+      [SKSpriteNode spriteNodeWithColor:[SKColor redColor]
+                                   size:CGSizeMake(w, h)];
+    water.name = @"water";
+    water.position = CGPointMake(x + w/2, y + h/2);
+    
+    water.physicsBody =
+      [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(w, h)];
+    
+    water.physicsBody.categoryBitMask =  PCWaterCategory;
+    water.physicsBody.dynamic = NO;
+    water.hidden = YES;
+    water.physicsBody.friction = 0;
+    
+   [_bgLayer addChild:water];
+  }
+}
+
+- (void)createUserInterface
+{
+  SKLabelNode* startMsg =
+    [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+  startMsg.name = @"msgLabel";
+  startMsg.text = @"Tap Screen to run!";
+  startMsg.fontSize = 32;
+  startMsg.position = CGPointMake(0, 20);
+  [self addChild: startMsg];
+  
+  _timerLabel =
+    [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+  _timerLabel.text =
+    [NSString stringWithFormat:@"Time Remaining: %2.2f",
+     _levelTimeLimit];
+  _timerLabel.fontSize = 18;
+  _timerLabel.horizontalAlignmentMode =
+    SKLabelHorizontalAlignmentModeLeft;
+  _timerLabel.position = CGPointMake(0, 130);
+  [self addChild:_timerLabel];
+
+  _timerLabel.hidden = YES;
+}
+
+- (void)update:(CFTimeInterval)currentTime
+{
+  _currentTime = currentTime;
+  
+  if(_gameState == PCGameStateStartingLevel && !self.isPaused){
+    self.paused = YES;
+  }
+  
+  if (_gameState != PCGameStatePlaying) {
+    return;
+  }
+  
+  _elapsedTime = currentTime - _startTime;
+  CFTimeInterval timeRemaining = _levelTimeLimit - _elapsedTime;
+  if (timeRemaining < 0) {
+    timeRemaining = 0;
+  }
+  _timerLabel.text =
+    [NSString stringWithFormat:@"Time Remaining: %2.2f",
+     timeRemaining];
+
+  if (_elapsedTime >= _levelTimeLimit) {
+    [self endLevelWithSuccess:NO];
+  } else if (![_bugLayer childNodeWithName:@"bug"]) {
+    [self endLevelWithSuccess:YES];
+  }
+}
+
+- (void)endLevelWithSuccess:(BOOL)won
+{
+  //1
+  SKLabelNode* label =
+    (SKLabelNode*)[self childNodeWithName:@"msgLabel"];
+  label.text = (won ? @"You Win!!!" : @"Too Slow!!!");
+  label.hidden = NO;
+  //2
+  SKLabelNode* nextLevel =
+    [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+  nextLevel.text = @"Next Level?";
+  nextLevel.name = @"nextLevelLabel";
+  nextLevel.fontSize = 28;
+  nextLevel.horizontalAlignmentMode =
+    (won ? SKLabelHorizontalAlignmentModeCenter :
+     SKLabelHorizontalAlignmentModeLeft);
+  nextLevel.position =
+    (won ? CGPointMake(0, -40) : CGPointMake(0+20, -40));
+  [self addChild:nextLevel];
+  //3
+  _player.physicsBody.linearDamping = 1;
+  _gameState = PCGameStateInLevelMenu;
+  
+  if (!won) {
+    SKLabelNode* tryAgain =
+      [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    tryAgain.text = @"Try Again?";
+    tryAgain.name = @"retryLabel";
+    tryAgain.fontSize = 28;
+    tryAgain.horizontalAlignmentMode =
+      SKLabelHorizontalAlignmentModeRight;
+    tryAgain.position = CGPointMake(0-20, -40);
+    [self addChild:tryAgain];
+  }
+}
+
+@end
