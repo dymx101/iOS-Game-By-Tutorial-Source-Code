@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F29AC4E917D0FE7500583DB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29AC4E817D0FE7500583DB7 /* Foundation.framework */; };
+		F29AC4EB17D0FE7500583DB7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29AC4EA17D0FE7500583DB7 /* CoreGraphics.framework */; };
+		F29AC4ED17D0FE7500583DB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29AC4EC17D0FE7500583DB7 /* UIKit.framework */; };
+		F29AC4EF17D0FE7500583DB7 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29AC4EE17D0FE7500583DB7 /* SpriteKit.framework */; };
+		F29AC4F517D0FE7500583DB7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F29AC4F317D0FE7500583DB7 /* InfoPlist.strings */; };
+		F29AC4F717D0FE7500583DB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F29AC4F617D0FE7500583DB7 /* main.m */; };
+		F29AC4FB17D0FE7500583DB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F29AC4FA17D0FE7500583DB7 /* AppDelegate.m */; };
+		F29AC4FE17D0FE7500583DB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29AC4FC17D0FE7500583DB7 /* Main.storyboard */; };
+		F29AC50117D0FE7500583DB7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29AC50017D0FE7500583DB7 /* ViewController.m */; };
+		F29AC50417D0FE7500583DB7 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F29AC50317D0FE7500583DB7 /* MyScene.m */; };
+		F29AC50617D0FE7500583DB7 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = F29AC50517D0FE7500583DB7 /* Spaceship.png */; };
+		F29AC50817D0FE7500583DB7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29AC50717D0FE7500583DB7 /* Images.xcassets */; };
+		F29AC50F17D0FE7500583DB7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29AC50E17D0FE7500583DB7 /* XCTest.framework */; };
+		F29AC51017D0FE7500583DB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29AC4E817D0FE7500583DB7 /* Foundation.framework */; };
+		F29AC51117D0FE7500583DB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29AC4EC17D0FE7500583DB7 /* UIKit.framework */; };
+		F29AC51917D0FE7500583DB7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F29AC51717D0FE7500583DB7 /* InfoPlist.strings */; };
+		F29AC51B17D0FE7500583DB7 /* HueAdjustChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F29AC51A17D0FE7500583DB7 /* HueAdjustChallengeTests.m */; };
+		F29AC52517D0FF1F00583DB7 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F29AC52417D0FF1F00583DB7 /* sprites.atlas */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F29AC51217D0FE7500583DB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F29AC4DD17D0FE7500583DB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F29AC4E417D0FE7500583DB7;
+			remoteInfo = HueAdjustChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F29AC4E517D0FE7500583DB7 /* HueAdjustChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HueAdjustChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F29AC4E817D0FE7500583DB7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F29AC4EA17D0FE7500583DB7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F29AC4EC17D0FE7500583DB7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F29AC4EE17D0FE7500583DB7 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		F29AC4F217D0FE7500583DB7 /* HueAdjustChallenge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HueAdjustChallenge-Info.plist"; sourceTree = "<group>"; };
+		F29AC4F417D0FE7500583DB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F29AC4F617D0FE7500583DB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F29AC4F817D0FE7500583DB7 /* HueAdjustChallenge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HueAdjustChallenge-Prefix.pch"; sourceTree = "<group>"; };
+		F29AC4F917D0FE7500583DB7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F29AC4FA17D0FE7500583DB7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F29AC4FD17D0FE7500583DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F29AC4FF17D0FE7500583DB7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F29AC50017D0FE7500583DB7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F29AC50217D0FE7500583DB7 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		F29AC50317D0FE7500583DB7 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		F29AC50517D0FE7500583DB7 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		F29AC50717D0FE7500583DB7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F29AC50D17D0FE7500583DB7 /* HueAdjustChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HueAdjustChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F29AC50E17D0FE7500583DB7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F29AC51617D0FE7500583DB7 /* HueAdjustChallengeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HueAdjustChallengeTests-Info.plist"; sourceTree = "<group>"; };
+		F29AC51817D0FE7500583DB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F29AC51A17D0FE7500583DB7 /* HueAdjustChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HueAdjustChallengeTests.m; sourceTree = "<group>"; };
+		F29AC52417D0FF1F00583DB7 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F29AC4E217D0FE7500583DB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F29AC4EB17D0FE7500583DB7 /* CoreGraphics.framework in Frameworks */,
+				F29AC4ED17D0FE7500583DB7 /* UIKit.framework in Frameworks */,
+				F29AC4EF17D0FE7500583DB7 /* SpriteKit.framework in Frameworks */,
+				F29AC4E917D0FE7500583DB7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F29AC50A17D0FE7500583DB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F29AC50F17D0FE7500583DB7 /* XCTest.framework in Frameworks */,
+				F29AC51117D0FE7500583DB7 /* UIKit.framework in Frameworks */,
+				F29AC51017D0FE7500583DB7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F29AC4DC17D0FE7500583DB7 = {
+			isa = PBXGroup;
+			children = (
+				F29AC4F017D0FE7500583DB7 /* HueAdjustChallenge */,
+				F29AC51417D0FE7500583DB7 /* HueAdjustChallengeTests */,
+				F29AC4E717D0FE7500583DB7 /* Frameworks */,
+				F29AC4E617D0FE7500583DB7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F29AC4E617D0FE7500583DB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F29AC4E517D0FE7500583DB7 /* HueAdjustChallenge.app */,
+				F29AC50D17D0FE7500583DB7 /* HueAdjustChallengeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F29AC4E717D0FE7500583DB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F29AC4E817D0FE7500583DB7 /* Foundation.framework */,
+				F29AC4EA17D0FE7500583DB7 /* CoreGraphics.framework */,
+				F29AC4EC17D0FE7500583DB7 /* UIKit.framework */,
+				F29AC4EE17D0FE7500583DB7 /* SpriteKit.framework */,
+				F29AC50E17D0FE7500583DB7 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F29AC4F017D0FE7500583DB7 /* HueAdjustChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				F29AC52417D0FF1F00583DB7 /* sprites.atlas */,
+				F29AC4F917D0FE7500583DB7 /* AppDelegate.h */,
+				F29AC4FA17D0FE7500583DB7 /* AppDelegate.m */,
+				F29AC4FC17D0FE7500583DB7 /* Main.storyboard */,
+				F29AC4FF17D0FE7500583DB7 /* ViewController.h */,
+				F29AC50017D0FE7500583DB7 /* ViewController.m */,
+				F29AC50217D0FE7500583DB7 /* MyScene.h */,
+				F29AC50317D0FE7500583DB7 /* MyScene.m */,
+				F29AC50517D0FE7500583DB7 /* Spaceship.png */,
+				F29AC50717D0FE7500583DB7 /* Images.xcassets */,
+				F29AC4F117D0FE7500583DB7 /* Supporting Files */,
+			);
+			path = HueAdjustChallenge;
+			sourceTree = "<group>";
+		};
+		F29AC4F117D0FE7500583DB7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F29AC4F217D0FE7500583DB7 /* HueAdjustChallenge-Info.plist */,
+				F29AC4F317D0FE7500583DB7 /* InfoPlist.strings */,
+				F29AC4F617D0FE7500583DB7 /* main.m */,
+				F29AC4F817D0FE7500583DB7 /* HueAdjustChallenge-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F29AC51417D0FE7500583DB7 /* HueAdjustChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				F29AC51A17D0FE7500583DB7 /* HueAdjustChallengeTests.m */,
+				F29AC51517D0FE7500583DB7 /* Supporting Files */,
+			);
+			path = HueAdjustChallengeTests;
+			sourceTree = "<group>";
+		};
+		F29AC51517D0FE7500583DB7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F29AC51617D0FE7500583DB7 /* HueAdjustChallengeTests-Info.plist */,
+				F29AC51717D0FE7500583DB7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F29AC4E417D0FE7500583DB7 /* HueAdjustChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F29AC51E17D0FE7500583DB7 /* Build configuration list for PBXNativeTarget "HueAdjustChallenge" */;
+			buildPhases = (
+				F29AC4E117D0FE7500583DB7 /* Sources */,
+				F29AC4E217D0FE7500583DB7 /* Frameworks */,
+				F29AC4E317D0FE7500583DB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HueAdjustChallenge;
+			productName = HueAdjustChallenge;
+			productReference = F29AC4E517D0FE7500583DB7 /* HueAdjustChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F29AC50C17D0FE7500583DB7 /* HueAdjustChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F29AC52117D0FE7500583DB7 /* Build configuration list for PBXNativeTarget "HueAdjustChallengeTests" */;
+			buildPhases = (
+				F29AC50917D0FE7500583DB7 /* Sources */,
+				F29AC50A17D0FE7500583DB7 /* Frameworks */,
+				F29AC50B17D0FE7500583DB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F29AC51317D0FE7500583DB7 /* PBXTargetDependency */,
+			);
+			name = HueAdjustChallengeTests;
+			productName = HueAdjustChallengeTests;
+			productReference = F29AC50D17D0FE7500583DB7 /* HueAdjustChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F29AC4DD17D0FE7500583DB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Razeware;
+				TargetAttributes = {
+					F29AC50C17D0FE7500583DB7 = {
+						TestTargetID = F29AC4E417D0FE7500583DB7;
+					};
+				};
+			};
+			buildConfigurationList = F29AC4E017D0FE7500583DB7 /* Build configuration list for PBXProject "HueAdjustChallenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F29AC4DC17D0FE7500583DB7;
+			productRefGroup = F29AC4E617D0FE7500583DB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F29AC4E417D0FE7500583DB7 /* HueAdjustChallenge */,
+				F29AC50C17D0FE7500583DB7 /* HueAdjustChallengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F29AC4E317D0FE7500583DB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F29AC52517D0FF1F00583DB7 /* sprites.atlas in Resources */,
+				F29AC4F517D0FE7500583DB7 /* InfoPlist.strings in Resources */,
+				F29AC50817D0FE7500583DB7 /* Images.xcassets in Resources */,
+				F29AC50617D0FE7500583DB7 /* Spaceship.png in Resources */,
+				F29AC4FE17D0FE7500583DB7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F29AC50B17D0FE7500583DB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F29AC51917D0FE7500583DB7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F29AC4E117D0FE7500583DB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F29AC50417D0FE7500583DB7 /* MyScene.m in Sources */,
+				F29AC50117D0FE7500583DB7 /* ViewController.m in Sources */,
+				F29AC4FB17D0FE7500583DB7 /* AppDelegate.m in Sources */,
+				F29AC4F717D0FE7500583DB7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F29AC50917D0FE7500583DB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F29AC51B17D0FE7500583DB7 /* HueAdjustChallengeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F29AC51317D0FE7500583DB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F29AC4E417D0FE7500583DB7 /* HueAdjustChallenge */;
+			targetProxy = F29AC51217D0FE7500583DB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F29AC4F317D0FE7500583DB7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F29AC4F417D0FE7500583DB7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F29AC4FC17D0FE7500583DB7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F29AC4FD17D0FE7500583DB7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F29AC51717D0FE7500583DB7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F29AC51817D0FE7500583DB7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F29AC51C17D0FE7500583DB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F29AC51D17D0FE7500583DB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F29AC51F17D0FE7500583DB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HueAdjustChallenge/HueAdjustChallenge-Prefix.pch";
+				INFOPLIST_FILE = "HueAdjustChallenge/HueAdjustChallenge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F29AC52017D0FE7500583DB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HueAdjustChallenge/HueAdjustChallenge-Prefix.pch";
+				INFOPLIST_FILE = "HueAdjustChallenge/HueAdjustChallenge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F29AC52217D0FE7500583DB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HueAdjustChallenge.app/HueAdjustChallenge";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HueAdjustChallenge/HueAdjustChallenge-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HueAdjustChallengeTests/HueAdjustChallengeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F29AC52317D0FE7500583DB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HueAdjustChallenge.app/HueAdjustChallenge";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HueAdjustChallenge/HueAdjustChallenge-Prefix.pch";
+				INFOPLIST_FILE = "HueAdjustChallengeTests/HueAdjustChallengeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F29AC4E017D0FE7500583DB7 /* Build configuration list for PBXProject "HueAdjustChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F29AC51C17D0FE7500583DB7 /* Debug */,
+				F29AC51D17D0FE7500583DB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F29AC51E17D0FE7500583DB7 /* Build configuration list for PBXNativeTarget "HueAdjustChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F29AC51F17D0FE7500583DB7 /* Debug */,
+				F29AC52017D0FE7500583DB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F29AC52117D0FE7500583DB7 /* Build configuration list for PBXNativeTarget "HueAdjustChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F29AC52217D0FE7500583DB7 /* Debug */,
+				F29AC52317D0FE7500583DB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F29AC4DD17D0FE7500583DB7 /* Project object */;
+}
